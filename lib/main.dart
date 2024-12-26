@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Buildout',
           theme: ThemeData(
+            scaffoldBackgroundColor: const Color(0xffF7FAFF),
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),

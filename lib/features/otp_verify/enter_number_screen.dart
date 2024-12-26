@@ -1,4 +1,8 @@
+import 'package:build_out/constants/text_styles.dart';
 import 'package:build_out/utils/images.dart';
+import 'package:build_out/widgets/common_button.dart';
+import 'package:build_out/widgets/common_text_feild.dart';
+import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -34,6 +38,38 @@ class EnterNumberScreen extends StatelessWidget {
                 width: 244.w,
               ),
             ),
+            H(42),
+            Text(
+              'OTP Verification',
+              style: getTextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xff00040D)),
+            ),
+            H(24),
+            Text(
+              'We will send you an One Time Password\nOn this mobile number',
+              textAlign: TextAlign.center,
+              style: getTextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xffAFAFB6)),
+            ),
+            H(100),
+            Text(
+              'Enter Mobile Number',
+              style: getTextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xff00040D)),
+            ),
+            H(24),
+            CommonTextFeild(
+              hintText: '1234-567-890',
+            ),
+            Spacer(),
+            CommonButton(text: 'Generate OTP'),
+            H(100),
           ],
         ),
       ),
