@@ -17,8 +17,6 @@ class CommonTextFeild extends StatefulWidget {
   final double? borderRadius;
   final double? contentPadVertical;
   final FocusNode? focusNode;
-  final Function()? sufixfn;
-  final Function()? prefixfn;
   final Function()? onTap;
   final Function(String? val)? onSaved;
   final Function(String? val)? onChanged;
@@ -34,7 +32,6 @@ class CommonTextFeild extends StatefulWidget {
       this.textHead,
       this.hintText,
       this.suffixIcon,
-      this.sufixfn,
       this.onSaved,
       this.onChanged,
       this.validation,
@@ -43,7 +40,6 @@ class CommonTextFeild extends StatefulWidget {
       this.controller,
       this.filColor,
       this.prefixIcon,
-      this.prefixfn,
       this.textColor,
       this.focusNode,
       this.maxLine,
@@ -65,8 +61,8 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
       suffixIcon: widget.suffixIcon,
       border: OutlineInputBorder(
         borderSide: BorderSide(
-          width: 1.5,
-          color: primaryColor.withOpacity(.6),
+      width: 1.5,
+          color: widget.borderColor ?? colorAFAFB6,
         ),
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
       ),
@@ -79,26 +75,19 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
           fontSize: 16, fontWeight: FontWeight.w400, color: colorAFAFB6),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
-          width: 1,
+          width: 1.5,
           color: widget.borderColor ?? colorAFAFB6,
         ),
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: const BorderSide(
+        borderSide:  BorderSide(
           width: 1.5,
-          color: colorAFAFB6,
+          color: primaryColor.withValues(alpha: .6),
         ),
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
       ),
-      // errorBorder: OutlineInputBorder(
-      //   borderSide: const BorderSide(color: Colors.red, width: 1),
-      //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-      // ),
-      // focusedErrorBorder: OutlineInputBorder(
-      //   borderSide: const BorderSide(color: Colors.red, width: 1),
-      //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-      // ),
+     
     );
   }
 
@@ -111,7 +100,7 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
             widget.textHead!,
             style: getTextStyle(
                 fontSize: 14,
-                color: Color(0xff434343),
+                color: const Color(0xff434343),
                 fontWeight: FontWeight.w400),
           ),
           const SizedBox(height: 4),
@@ -132,7 +121,7 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
           maxLines: widget.maxLine ?? 1,
           maxLength: widget.maxLength,
           style: getTextStyle(
-              color: Color(0xff00040D),
+              color: const Color(0xff00040D),
               fontSize: 14,
               fontWeight: FontWeight.w400),
           inputFormatters: widget.inputFormatters ?? [],

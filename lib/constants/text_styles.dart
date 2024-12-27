@@ -9,6 +9,7 @@ TextStyle getTextStyle({
   double? letterSpacing,
   double? height,
   TextDecoration? decoration,
+   Color? decorationColor,
 }) {
   return GoogleFonts.getFont('Roboto',
       color: color,
@@ -16,7 +17,7 @@ TextStyle getTextStyle({
       fontWeight: fontWeight,
       letterSpacing: letterSpacing,
       height: height,
-      decoration: decoration);
+      decoration: decoration , decorationColor:decorationColor );
 }
 
 //---------------------------------60---------------------------------------------//
@@ -337,7 +338,7 @@ TextStyle get ts16c000000w5 =>
 TextStyle get ts16c000000w5opacity5 => getTextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: color000000.withOpacity(0.5));
+    color: color000000.withValues(alpha:0.5));
 
 TextStyle get ts16c7D7D7Dw5 =>
     getTextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: color7D7D7D);

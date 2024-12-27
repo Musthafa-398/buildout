@@ -25,11 +25,12 @@ class CommonButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: primaryColor,
-        disabledBackgroundColor: primaryColor,
+        backgroundColor:bgcolor?? primaryColor,
+        disabledBackgroundColor:bgcolor?? primaryColor,
         minimumSize: size ?? Size(double.infinity, 54.h),
-        shape: RoundedRectangleBorder(
+        shape: RoundedRectangleBorder(side: const BorderSide(color: primaryColor , width: 1.5),
           borderRadius: BorderRadius.circular(borderRadius ?? 8),
+          
         ),
       ),
       onPressed: onPressed,

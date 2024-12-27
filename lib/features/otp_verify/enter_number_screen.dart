@@ -1,4 +1,5 @@
 import 'package:build_out/constants/text_styles.dart';
+import 'package:build_out/features/otp_verify/otp_screen.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/common_button.dart';
 import 'package:build_out/widgets/common_text_feild.dart';
@@ -66,9 +67,32 @@ class EnterNumberScreen extends StatelessWidget {
             H(24),
             CommonTextFeild(
               hintText: '1234-567-890',
+              prefixIcon: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  W(16),
+                  Text(
+                    '+91',
+                    style: getTextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                      color: const Color(0xffAFAFB6),
+                    ),
+                  ),W(6),
+                  const SizedBox(
+                      height: 54,
+                      child: VerticalDivider(
+                        thickness: 1.5,
+                        color: Color(0xffAFAFB6),
+                      )) ,
+                ],
+              ),
             ),
-            Spacer(),
-            CommonButton(text: 'Generate OTP'),
+            const Spacer(),
+             CommonButton(text: 'Generate OTP' , onPressed: (){
+              Navigator.pushNamed(context, OtpScreen.route);
+             }),
             H(100),
           ],
         ),
