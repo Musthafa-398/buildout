@@ -1,6 +1,6 @@
-class CategoryModel {
-  int id;
-  String image;
+class ItemModel {
+  int? id;
+  String? image;
   String title;
-  CategoryModel({required this.id, required this.image, required this.title});
+  ItemModel({ this.id, required this.image, required this.title});
 }

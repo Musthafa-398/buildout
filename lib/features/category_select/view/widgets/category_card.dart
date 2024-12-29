@@ -10,7 +10,7 @@ import '../../../../widgets/gap.dart';
 import '../../model/category_model.dart';
 
 class CategoryCard extends StatelessWidget {
- final CategoryModel categoryModel;
+ final ItemModel categoryModel;
   const CategoryCard({
     super.key, required this.categoryModel,
   });
@@ -31,7 +31,7 @@ class CategoryCard extends StatelessWidget {
           Container(
             width: 86,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(6), color: Colors.grey, image: DecorationImage(image:AssetImage(categoryModel.image),fit: BoxFit.cover)),
+                borderRadius: BorderRadius.circular(6), color: Colors.grey, image: DecorationImage(image:AssetImage(categoryModel.image??''),fit: BoxFit.cover)),
           ),
           W(16),
           Expanded(

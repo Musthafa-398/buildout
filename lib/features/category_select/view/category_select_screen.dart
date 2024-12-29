@@ -48,7 +48,7 @@ class CategorySelectScreen extends StatelessWidget {
                   shrinkWrap: true,
                   padding: EdgeInsets.zero,
                   itemBuilder: (context, index) {
-                    CategoryModel categoryModel =
+                    ItemModel categoryModel =
                         categorySelectViewModel.categoryList[index];
                     return InkWell(
                         onTap: () {

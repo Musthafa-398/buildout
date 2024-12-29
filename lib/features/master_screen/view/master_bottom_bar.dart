@@ -19,7 +19,10 @@ class MasterBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: Platform.isAndroid ? 95.h : 100.h,
-        color: const Color(0xffF7FAFF),
+        decoration: const BoxDecoration(
+            color: Color(0xffF7FAFF),
+            border:
+                Border(top: BorderSide(color: Color(0xffAFAFB6), width: 1))),
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 18.w, horizontal: 4.w),
           child: Consumer<MasterViewModel>(
@@ -62,27 +65,34 @@ class MasterBottomBar extends StatelessWidget {
                             children: [
                               SvgPicture.asset(
                                 e.icon,
-                                height: 28.h,
-                                width: 28.w,
+                                height: 32.h,
+                                width: 32.w,
                                 fit: BoxFit.cover,
                                 colorFilter: ColorFilter.mode(
                                     iconColor, BlendMode.srcIn),
-                              ),if(e.count!=null)
-                              Positioned(
-                                  top: 1,
-                                  right: .3,
-                                  child: Container(
-                                    height: 14,
-                                    width: 14,
-                                    decoration: BoxDecoration(
-                                        color: primaryColor,
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                            color: const Color(0xffF7FAFF),
-                                            width: .5)),
-                                            alignment: Alignment.center,
-                                            child: Text('${e.count}' , style: getTextStyle(fontSize: 8 , fontWeight: FontWeight.w700 , color: Colors.white),),
-                                  ))
+                              ),
+                              if (e.count != null)
+                                Positioned(
+                                    top: 1,
+                                    right: .3,
+                                    child: Container(
+                                      height: 14,
+                                      width: 14,
+                                      decoration: BoxDecoration(
+                                          color: primaryColor,
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: const Color(0xffF7FAFF),
+                                              width: .5)),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        '${e.count}',
+                                        style: getTextStyle(
+                                            fontSize: 8,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white),
+                                      ),
+                                    ))
                             ],
                           ),
                           H(3),
@@ -109,8 +119,8 @@ class MasterBottomBar extends StatelessWidget {
 
 final bottomBarItems = [
   BottomBarItemModel(title: 'Home', icon: Images.home),
-  BottomBarItemModel(title: 'Offers', icon: Images.offers , count: 1),
+  BottomBarItemModel(title: 'Offers', icon: Images.offers, count: 1),
   BottomBarItemModel(title: 'Market', icon: Images.market),
-  BottomBarItemModel(title: 'Mails', icon: Images.mail , count: 2),
+  BottomBarItemModel(title: 'Mails', icon: Images.mail, count: 2),
   BottomBarItemModel(title: 'Profile', icon: Images.profile),
 ];
