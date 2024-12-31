@@ -50,6 +50,8 @@ class Images {
   static const String returnIcon = 'assets/icons/return.svg';
 
   static const String payment = 'assets/icons/payment.svg';
+  static const String upArrow = 'assets/icons/up_arrow.svg';
+
 
   static const String login = 'assets/images/login.png';
   static const String category1 = 'assets/images/c1.png';
