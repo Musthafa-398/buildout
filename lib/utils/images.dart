@@ -51,6 +51,12 @@ class Images {
 
   static const String payment = 'assets/icons/payment.svg';
   static const String upArrow = 'assets/icons/up_arrow.svg';
+  static const String edit = 'assets/icons/edit.svg';
+  static const String calendar = 'assets/icons/calendar.svg';
+  static const String upload = 'assets/icons/upload.svg';
+
+
+
 
 
   static const String login = 'assets/images/login.png';

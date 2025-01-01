@@ -1,5 +1,6 @@
 import 'package:build_out/constants/colors.dart';
 import 'package:build_out/constants/text_styles.dart';
+import 'package:build_out/features/create_request/view/create_request_screen.dart';
 import 'package:build_out/features/sort_and_filter/widgets/looking_for_widget.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/common_back_button.dart';
@@ -486,7 +487,9 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   H(16),
                   const LookingForWidget(),
                   H(37),
-                  const CommonButton(text: 'Enquiry now'),
+                   CommonButton(text: 'Enquiry now' , onPressed: () {
+Navigator.pushNamed(context, CreateRequestScreen.route);
+                  },),
                   H(18),
                   CommonButton(
                     child: Row(

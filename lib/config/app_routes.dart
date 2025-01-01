@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../features/category_select/view/category_select_screen.dart';
 import '../features/create_account/create_account_screen.dart';
+import '../features/create_request/view/create_request_screen.dart';
 import '../features/item_details/item_details_screen.dart';
 import '../features/items_see_all/items_see_all_screen.dart';
 import '../features/location_permission/location_permission_screen.dart';
@@ -53,6 +54,10 @@ class Routes {
          case ItemDetailsScreen.route:
         return MaterialPageRoute(
           builder: (context) => const ItemDetailsScreen(),
+        );
+          case CreateRequestScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const CreateRequestScreen(),
         );
       default:
         return null;
