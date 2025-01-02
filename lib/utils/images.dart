@@ -54,6 +54,8 @@ class Images {
   static const String edit = 'assets/icons/edit.svg';
   static const String calendar = 'assets/icons/calendar.svg';
   static const String upload = 'assets/icons/upload.svg';
+  static const String delete = 'assets/icons/delete.svg';
+
 
 
 

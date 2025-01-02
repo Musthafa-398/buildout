@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../features/category_select/view/category_select_screen.dart';
+import '../features/checkout/view/checkout_screen.dart';
 import '../features/create_account/create_account_screen.dart';
 import '../features/create_request/view/create_request_screen.dart';
 import '../features/item_details/item_details_screen.dart';
@@ -51,13 +52,17 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const SortAndFilterScreen(),
         );
-         case ItemDetailsScreen.route:
+      case ItemDetailsScreen.route:
         return MaterialPageRoute(
           builder: (context) => const ItemDetailsScreen(),
         );
-          case CreateRequestScreen.route:
+      case CreateRequestScreen.route:
         return MaterialPageRoute(
           builder: (context) => const CreateRequestScreen(),
+        );
+      case CheckoutScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const CheckoutScreen(),
         );
       default:
         return null;

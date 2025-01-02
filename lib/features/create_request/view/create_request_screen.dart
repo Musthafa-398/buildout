@@ -1,4 +1,5 @@
 import 'package:build_out/constants/text_styles.dart';
+import 'package:build_out/features/checkout/view/checkout_screen.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/common_button.dart';
 import 'package:build_out/widgets/common_text_feild.dart';
@@ -236,7 +237,9 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                       ),
                     ),
                     H(18),
-                    const CommonButton(text: 'Submit Request'),
+                     CommonButton(text: 'Submit Request' , onPressed: () {
+                       Navigator.pushNamed(context, CheckoutScreen.route);
+                     },),
                     H(30)
                   ],
                 ),
