@@ -8,6 +8,7 @@ import '../features/item_details/item_details_screen.dart';
 import '../features/items_see_all/items_see_all_screen.dart';
 import '../features/location_permission/location_permission_screen.dart';
 import '../features/master_screen/view/master_screen.dart';
+import '../features/order_confirm/order_confirm_screen.dart';
 import '../features/otp_verify/enter_number_screen.dart';
 import '../features/otp_verify/otp_screen.dart';
 import '../features/sort_and_filter/sort_and_filter_screen.dart';
@@ -63,6 +64,10 @@ class Routes {
       case CheckoutScreen.route:
         return MaterialPageRoute(
           builder: (context) => const CheckoutScreen(),
+        );
+        case OrderConfirmScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const OrderConfirmScreen(),
         );
       default:
         return null;

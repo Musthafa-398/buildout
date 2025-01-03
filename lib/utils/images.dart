@@ -55,6 +55,12 @@ class Images {
   static const String calendar = 'assets/icons/calendar.svg';
   static const String upload = 'assets/icons/upload.svg';
   static const String delete = 'assets/icons/delete.svg';
+  static const String coupon = 'assets/icons/coupon.svg';
+  static const String orderConfirm = 'assets/images/order_confirm.svg';
+  static const String confirm = 'assets/images/confirm.svg';
+
+
+
 
 
 

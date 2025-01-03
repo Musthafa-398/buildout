@@ -1,6 +1,5 @@
 import 'package:build_out/features/master_screen/view/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../view_model/master_view_model.dart';
