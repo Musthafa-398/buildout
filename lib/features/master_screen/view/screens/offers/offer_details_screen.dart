@@ -61,7 +61,7 @@ class OfferDetailsScreen extends StatelessWidget {
                                 color: const Color(0xff000000)
                                     .withValues(alpha: .2))
                           ],
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage(Images.offer4),
                               fit: BoxFit.cover)),
                     ),
@@ -71,7 +71,7 @@ class OfferDetailsScreen extends StatelessWidget {
                       style: getTextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xff00040D)),
+                          color: const Color(0xff00040D)),
                     ),
                     H(16),
                     Text(
@@ -79,7 +79,7 @@ class OfferDetailsScreen extends StatelessWidget {
                       style: getTextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xff434343)),
+                          color: const Color(0xff434343)),
                     ),
                     H(40),
                     Text(
@@ -87,7 +87,7 @@ class OfferDetailsScreen extends StatelessWidget {
                       style: getTextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xffAFAFB6)),
+                          color: const Color(0xffAFAFB6)),
                     ),
                     H(6),
                     Row(mainAxisAlignment: MainAxisAlignment.center,

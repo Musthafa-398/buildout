@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../constants/colors.dart';
 import '../../constants/text_styles.dart';
 import '../../widgets/common_back_button.dart';
+import 'widgets/ticket_card.dart';
 
 class HelpScreen extends StatefulWidget {
   static const route = '/help-screen';
@@ -70,20 +71,15 @@ class _HelpScreenState extends State<HelpScreen> {
                         ),
                         H(30),
 
-                        Container(
-                          height: 114.h,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(9),
-                              boxShadow: [
-                                BoxShadow(
-                                    offset: Offset(1, 2),
-                                    blurRadius: 10,
-                                    spreadRadius: 0,
-                                    color: Colors.black.withValues(alpha: .15))
-                              ]),
-                        ),
+                        ListView.separated(
+                            physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            padding: EdgeInsets.zero,
+                            itemBuilder: (context, index) {
+                              return TicketCard(status: selectedTitle);
+                            },
+                            separatorBuilder: (context, index) => H(18),
+                            itemCount: 2),
 
                         //
                         H(30),
@@ -95,7 +91,8 @@ class _HelpScreenState extends State<HelpScreen> {
                               color: const Color(0xff434343)),
                         ),
                         H(18),
-                        ListView.separated(physics: NeverScrollableScrollPhysics(),
+                        ListView.separated(
+                            physics: const NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
                             padding: EdgeInsets.zero,
                             itemBuilder: (context, index) {
@@ -123,17 +120,19 @@ class _HelpScreenState extends State<HelpScreen> {
         width: 104.w,
         padding: EdgeInsets.symmetric(vertical: 12.h),
         decoration: BoxDecoration(
-            color: isSelected ? primaryColor : Color(0xffF7FAFF),
+            color: isSelected ? primaryColor : const Color(0xffF7FAFF),
             borderRadius: BorderRadius.circular(26),
             border: Border.all(
-                color: isSelected ? primaryColor : Color(0xffAFAFB6))),
+                color: isSelected ? primaryColor : const Color(0xffAFAFB6))),
         alignment: Alignment.center,
         child: Text(
           title,
           style: getTextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w700,
-              color: isSelected ? Color(0xffF7FAFF) : Color(0xffAFAFB6)),
+              color: isSelected
+                  ? const Color(0xffF7FAFF)
+                  : const Color(0xffAFAFB6)),
         ),
       ),
     );

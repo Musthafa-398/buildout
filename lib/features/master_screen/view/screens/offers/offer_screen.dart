@@ -134,7 +134,7 @@ class _OfferScreenState extends State<OfferScreen> {
                    ListView.separated(
                     shrinkWrap: true,
                     padding: EdgeInsets.zero,
-                    itemBuilder: (context, index) => OfferCard(), separatorBuilder: (context, index) => H(30), itemCount: 2)
+                    itemBuilder: (context, index) => const OfferCard(), separatorBuilder: (context, index) => H(30), itemCount: 2)
                   ])))
         ],
       ),
