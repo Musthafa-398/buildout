@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: CommonTextFeild(
-              hintText: 'Search Designs',
+              hintText: 'Search products',
               prefixIcon: IconButton(
                 onPressed: null,
                 icon: SvgPicture.asset(
