@@ -58,16 +58,37 @@ class Images {
   static const String coupon = 'assets/icons/coupon.svg';
   static const String orderConfirm = 'assets/images/order_confirm.svg';
   static const String confirm = 'assets/images/confirm.svg';
+  static const String call = 'assets/icons/call.svg';
+  static const String contact = 'assets/icons/contact.svg';
+  static const String order = 'assets/icons/order.svg';
+  static const String scheme = 'assets/icons/scheme.svg';
+  static const String logout = 'assets/icons/logout.svg';
+  static const String link = 'assets/icons/link.svg';
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+  static const String profileBG = 'assets/images/profile_bg.svg';
+  static const String profilePic = 'assets/images/dp.svg';
+  static const String offer3 = 'assets/images/offer2.svg';
 
 
 
   static const String login = 'assets/images/login.png';
+  static const String offer4 = 'assets/images/offer4.jpeg';
+
+  static const String offer5 = 'assets/images/offer5.jpeg';
+
   static const String category1 = 'assets/images/c1.png';
   static const String category2 = 'assets/images/c2.png';
 

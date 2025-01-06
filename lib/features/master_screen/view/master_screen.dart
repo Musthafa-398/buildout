@@ -1,4 +1,6 @@
 import 'package:build_out/features/master_screen/view/screens/home/home_screen.dart';
+import 'package:build_out/features/master_screen/view/screens/offers/offer_screen.dart';
+import 'package:build_out/features/master_screen/view/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +20,13 @@ class MasterScreen extends StatelessWidget {
       body: IndexedStack(
         index: masterViewModel.selectedIndex,
         children: const [
-          HomeScreen()
+          HomeScreen() ,  
+
+          OfferScreen(),
+          ProfileScreen(),
+          ProfileScreen(),
+            ProfileScreen()
+
         ],
       ),
       bottomNavigationBar: const MasterBottomBar(),

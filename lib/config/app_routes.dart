@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../features/address/view/add_address_screen.dart';
+import '../features/address/view/address_screen.dart';
 import '../features/category_select/view/category_select_screen.dart';
 import '../features/checkout/view/checkout_screen.dart';
 import '../features/create_account/create_account_screen.dart';
 import '../features/create_request/view/create_request_screen.dart';
+import '../features/help/help_screen.dart';
 import '../features/item_details/item_details_screen.dart';
 import '../features/items_see_all/items_see_all_screen.dart';
 import '../features/location_permission/location_permission_screen.dart';
 import '../features/master_screen/view/master_screen.dart';
+import '../features/master_screen/view/screens/offers/offer_details_screen.dart';
+import '../features/master_screen/view/screens/offers/offer_screen.dart';
 import '../features/order_confirm/order_confirm_screen.dart';
 import '../features/otp_verify/enter_number_screen.dart';
 import '../features/otp_verify/otp_screen.dart';
@@ -65,9 +70,29 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const CheckoutScreen(),
         );
-        case OrderConfirmScreen.route:
+      case OrderConfirmScreen.route:
         return MaterialPageRoute(
           builder: (context) => const OrderConfirmScreen(),
+        );
+      case AddressScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const AddressScreen(),
+        );
+      case AddAddressScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const AddAddressScreen(),
+        );
+      case OfferScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const OfferScreen(),
+        );
+      case OfferDetailsScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const OfferDetailsScreen(),
+        );
+      case HelpScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const HelpScreen(),
         );
       default:
         return null;

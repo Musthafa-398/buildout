@@ -1,4 +1,5 @@
 import 'package:build_out/constants/colors.dart';
+import 'package:build_out/features/address/view/address_screen.dart';
 import 'package:build_out/features/order_confirm/order_confirm_screen.dart';
 import 'package:build_out/widgets/common_button.dart';
 import 'package:flutter/material.dart';
@@ -21,28 +22,27 @@ class CheckoutScreen extends StatelessWidget {
           // H(30),
           Container(
             // height: 50,
-            decoration:  BoxDecoration(
-              color: Colors.white,
-              border: const Border(
-                  bottom: BorderSide(color: Color(0xffAFAFB6), width: 1)),
-                
-          boxShadow:     [BoxShadow(
-                  blurStyle: BlurStyle.outer,
-               offset: const Offset(0.0, 0.75),
-                  blurRadius: 19,
-                  spreadRadius: 0,
-                  color: primaryColor.withValues(alpha: .25))]
-          
-            ),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                border: const Border(
+                    bottom: BorderSide(color: Color(0xffAFAFB6), width: 1)),
+                boxShadow: [
+                  BoxShadow(
+                      blurStyle: BlurStyle.outer,
+                      offset: const Offset(0.0, 0.75),
+                      blurRadius: 19,
+                      spreadRadius: 0,
+                      color: primaryColor.withValues(alpha: .25))
+                ]),
             child: Column(
-              children: [H(30),
+              children: [
+                H(30),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10.w),
                   child: Row(
                     children: [
                       IconButton(
-                          onPressed: () {
-                          },
+                          onPressed: () {},
                           icon: SvgPicture.asset(Images.menu)),
                       Text(
                         'MENU',
@@ -58,7 +58,8 @@ class CheckoutScreen extends StatelessWidget {
                               height: 30.h, width: 30.w)),
                     ],
                   ),
-                ),H(5)
+                ),
+                H(5)
               ],
             ),
           ),
@@ -137,7 +138,8 @@ class CheckoutScreen extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(horizontal: 10.w, vertical: 13.h),
                     decoration: BoxDecoration(
-                        border: Border.all(color: const Color(0xffAFAFB6), width: 1),
+                        border: Border.all(
+                            color: const Color(0xffAFAFB6), width: 1),
                         borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(8),
                             topRight: Radius.circular(8))),
@@ -193,7 +195,7 @@ class CheckoutScreen extends StatelessWidget {
                                   fontSize: 14,
                                   fontWeight: FontWeight.w700,
                                   color: primaryColor),
-                              bgcolor: Colors.white,
+                              bgcolor: Colors.white,onPressed: () => Navigator.pushNamed(context, AddressScreen.route),
                             )
                           ],
                         ),
@@ -212,7 +214,8 @@ class CheckoutScreen extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(horizontal: 10.w, vertical: 13.h),
                     decoration: BoxDecoration(
-                        border: Border.all(color: const Color(0xffAFAFB6), width: 1),
+                        border: Border.all(
+                            color: const Color(0xffAFAFB6), width: 1),
                         borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(8),
                             bottomRight: Radius.circular(8))),
@@ -255,7 +258,8 @@ class CheckoutScreen extends StatelessWidget {
                               color: const Color(0xffF7FAFF)),
                         )
                       ],
-                    ),onPressed: () {
+                    ),
+                    onPressed: () {
                       Navigator.pushNamed(context, OrderConfirmScreen.route);
                     },
                   ),
