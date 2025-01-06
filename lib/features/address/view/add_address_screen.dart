@@ -1,11 +1,13 @@
+import 'package:build_out/features/address/view/map_screen.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/common_button.dart';
 import 'package:build_out/widgets/common_dropdown.dart';
 import 'package:build_out/widgets/common_text_feild.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:latlong2/latlong.dart';
 import '../../../constants/colors.dart';
 import '../../../constants/text_styles.dart';
 import '../../../widgets/common_back_button.dart';
@@ -62,10 +64,44 @@ class AddAddressScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Container(
-                      height: 170.h,
-                      width: double.infinity,
-                      color: Colors.amber),
+                  Stack(
+                    children: [
+                      SizedBox(
+                        height: 171.h,
+                        width: double.infinity,
+                        child: FlutterMap(
+                          options: const MapOptions(
+                            initialCenter: LatLng(12.971599, 77.594566),
+                            initialZoom: 14,
+                          ),
+                          children: [
+                            TileLayer(
+                              urlTemplate:
+                                  'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                              userAgentPackageName: 'com.example.app',
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: CommonTextFeild(
+                            hintText: 'Search for area, street name...',
+                            prefixIcon: IconButton(
+                              onPressed: null,
+                              icon: SvgPicture.asset(
+                                Images.search,
+                                height: 20.h,
+                                width: 20.w,
+                                fit: BoxFit.fill,
+                              ),
+                            )),
+                      ),
+                      Positioned(
+                      left: 20,bottom: 8,
+                          child: Text('Enter Complete address' , style: getTextStyle(fontSize: 18 , fontWeight: FontWeight.w700 , color: Color(0xffF7FAFF)),))
+                    ],
+                  ),
                   H(24),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -189,7 +225,12 @@ class AddAddressScreen extends StatelessWidget {
                           ],
                         ),
                         H(23),
-                        const CommonButton(text: 'Save Address'),
+                        CommonButton(
+                          text: 'Save Address',
+                          onPressed: () {
+                            Navigator.pushNamed(context, MapScreen.route);
+                          },
+                        ),
                         H(30)
                       ],
                     ),

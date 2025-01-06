@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../features/address/view/add_address_screen.dart';
 import '../features/address/view/address_screen.dart';
+import '../features/address/view/map_screen.dart';
 import '../features/category_select/view/category_select_screen.dart';
 import '../features/checkout/view/checkout_screen.dart';
 import '../features/create_account/create_account_screen.dart';
@@ -93,6 +94,10 @@ class Routes {
       case HelpScreen.route:
         return MaterialPageRoute(
           builder: (context) => const HelpScreen(),
+        );
+             case MapScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const MapScreen(),
         );
       default:
         return null;
