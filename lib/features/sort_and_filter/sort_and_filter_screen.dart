@@ -167,7 +167,7 @@ class SortAndFilterScreen extends StatelessWidget {
                             Text(
                               'SORT',
                               style: getTextStyle(
-                                  fontSize: 20,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w700,
                                   color: primaryColor),
                             )
@@ -195,7 +195,7 @@ class SortAndFilterScreen extends StatelessWidget {
                             Text(
                               'FILTER',
                               style: getTextStyle(
-                                  fontSize: 20,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w700,
                                   color: primaryColor),
                             )
@@ -240,7 +240,7 @@ class SortAndFilterScreen extends StatelessWidget {
               Text(
                 'Price on request',
                 style: getTextStyle(
-                    fontSize: 16,
+                    fontSize: 15,
                     fontWeight: FontWeight.w700,
                     color: const Color(0xff434343)),
               )
@@ -265,7 +265,7 @@ class SortAndFilterScreen extends StatelessWidget {
       child: Text(
         title,
         style: getTextStyle(
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,
             color: isSelected ? primaryColor : const Color(0xff00040D)),
       ),

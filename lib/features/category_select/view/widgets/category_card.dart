@@ -38,7 +38,7 @@ class CategoryCard extends StatelessWidget {
             child: Text(
              categoryModel.title,
               style: getTextStyle(
-                  fontSize: 17,
+                  fontSize: 15,
                   fontWeight: FontWeight.w700,
                   color: const Color(0xff00040D)),
             ),

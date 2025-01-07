@@ -41,7 +41,7 @@ class CommonButton extends StatelessWidget {
           textAlign: TextAlign.center,
           style: textStyle ??
               getTextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.w700,
                   color: Colors.white)),
     );

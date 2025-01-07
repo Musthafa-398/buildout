@@ -18,7 +18,7 @@ class MasterBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: Platform.isAndroid ? 95.h : 100.h,
+        height:  100.h,
         decoration: const BoxDecoration(
             color: Color(0xffF7FAFF),
             border:

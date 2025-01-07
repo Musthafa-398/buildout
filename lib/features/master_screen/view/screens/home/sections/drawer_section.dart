@@ -64,12 +64,14 @@ class DrawerSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 ItemModel item = itemsList[index];
                 return ListTile(
-                  onTap: () {if(index==9){
-                    scaffoldKey.currentState?.closeDrawer();
-                    Navigator.pushNamed(context, HelpScreen.route);
-                  }},
+                  onTap: () {
+                    if (index == 9) {
+                      scaffoldKey.currentState?.closeDrawer();
+                      Navigator.pushNamed(context, HelpScreen.route);
+                    }
+                  },
                   leading: SvgPicture.asset(
-                    item.image??'',
+                    item.image ?? '',
                     height: 25.h,
                     width: 25.w,
                     fit: BoxFit.cover,
@@ -77,7 +79,7 @@ class DrawerSection extends StatelessWidget {
                   title: Text(
                     item.title,
                     style: getTextStyle(
-                        fontSize: 16,
+                        fontSize: 15,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xff8E8E8E)),
                   ),

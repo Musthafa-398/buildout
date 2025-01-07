@@ -30,100 +30,104 @@ class _VideoSectionState extends State<VideoSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [     
-           H(30),
-          Row(
-          children: [
-            W(20),
-            Image.asset(
-              Images.dp,
-              height: 30.h,
-              width: 30.w,
-              fit: BoxFit.cover,
-            ),
-            W(12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Taseen Ahmad',
-                    style: getTextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xff00040D)),
+    return Expanded(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [     
+               H(30),
+              Row(
+              children: [
+                W(20),
+                Image.asset(
+                  Images.dp,
+                  height: 30.h,
+                  width: 30.w,
+                  fit: BoxFit.cover,
+                ),
+                W(12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Taseen Ahmad',
+                        style: getTextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w700,
+                            color: const Color(0xff00040D)),
+                      ),
+                      H(2),
+                      Text(
+                        'Interior Designer • Kerala',
+                        style: getTextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                            color: const Color(0xff8E8E8E)),
+                      )
+                    ],
                   ),
-                  H(2),
-                  Text(
-                    'Interior Designer • Kerala',
-                    style: getTextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xff8E8E8E)),
-                  )
-                ],
-              ),
-            ),
-            PopupMenuButton(
-              itemBuilder: (context) => [],
-              iconColor: const Color(0xff434343),
-            ),
-            W(10)
+                ),
+                PopupMenuButton(
+                  itemBuilder: (context) => [],
+                  iconColor: const Color(0xff434343),
+                ),
+                W(10)
+              ],
+            ) ,
+            Container(
+                height: 500.h,
+                color: const Color(0xff00040D),
+                alignment: Alignment.center,
+                child: _controller.value.isInitialized
+                    ? AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: VideoPlayer(_controller ),
+                      )
+                    : const Center(child: CircularProgressIndicator.adaptive())),
+            H(10),
+            Row(
+              children: [
+                W(15),
+                IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      Images.share,
+                      height: 24.h,
+                      width: 24.w,
+                    )),
+                IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      Images.save,
+                      height: 24.h,
+                      width: 24.w,
+                    )),
+                const Spacer(),
+                CommonButton(
+                  text: 'More Details',
+                  size: Size(
+                    93.w,
+                    27.h,
+                  ),
+                  borderRadius: 5,
+                  textStyle: getTextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      color: const Color(0xffF7FAFF)),
+                  onPressed: () {
+                    setState(() {
+                      _controller.value.isPlaying
+                          ? _controller.pause()
+                          : _controller.play();
+                    });
+                  },
+                ),
+                W(20)
+              ],
+            )
           ],
-        ) ,
-        Container(
-            height: 554.h,
-            color: const Color(0xff00040D),
-            alignment: Alignment.center,
-            child: _controller.value.isInitialized
-                ? AspectRatio(
-                    aspectRatio: _controller.value.aspectRatio,
-                    child: VideoPlayer(_controller ),
-                  )
-                : const Center(child: CircularProgressIndicator.adaptive())),
-        H(10),
-        Row(
-          children: [
-            W(15),
-            IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  Images.share,
-                  height: 24.h,
-                  width: 24.w,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset(
-                  Images.save,
-                  height: 24.h,
-                  width: 24.w,
-                )),
-            const Spacer(),
-            CommonButton(
-              text: 'More Details',
-              size: Size(
-                93.w,
-                27.h,
-              ),
-              borderRadius: 5,
-              textStyle: getTextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(0xffF7FAFF)),
-              onPressed: () {
-                setState(() {
-                  _controller.value.isPlaying
-                      ? _controller.pause()
-                      : _controller.play();
-                });
-              },
-            ),
-            W(20)
-          ],
-        )
-      ],
+        ),
+      ),
     );
   }
 

@@ -45,7 +45,7 @@ class StepperWidget extends StatelessWidget {
               child: Text(
                 '$number',
                 style: getTextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: const Color(0xff000000)),
               ),
@@ -61,14 +61,14 @@ class StepperWidget extends StatelessWidget {
               Text(
                 title,
                 style: getTextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xff434343)),
               ),
               Text(
                 description,maxLines: 2,overflow: TextOverflow.ellipsis,
                 style: getTextStyle(
-                    fontSize: 14,
+                    fontSize: 12,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xff8E8E8E)),
               )

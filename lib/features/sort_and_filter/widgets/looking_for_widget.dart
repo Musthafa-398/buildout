@@ -25,7 +25,7 @@ class LookingForWidget extends StatelessWidget {
           Text(
             'Looking for something specific?',
             style: getTextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xff434343)),
           ),
@@ -34,11 +34,11 @@ class LookingForWidget extends StatelessWidget {
             'Tell us your requirements and we will call you back shortly',
             textAlign: TextAlign.center,
             style: getTextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff434343)),
           ),
-          H(24),
+          H(18),
           CommonButton(
             text: 'Submit Enquiry',
             size: Size(153.w, 30.h),

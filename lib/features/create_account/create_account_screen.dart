@@ -36,7 +36,7 @@ class CreateAccountScreen extends StatelessWidget {
             Text(
               'Create your account',
               style: getTextStyle(
-                  fontSize: 30,
+                  fontSize: 28,
                   fontWeight: FontWeight.w700,
                   color: const Color(0xff00040D)),
             ),
@@ -60,7 +60,7 @@ class CreateAccountScreen extends StatelessWidget {
             Text(
               "We use your Email I'd & Mobile Number to send your",
               style: getTextStyle(
-                fontSize: 16,
+                fontSize: 14,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xffAFAFB6),
               ),
@@ -69,7 +69,7 @@ class CreateAccountScreen extends StatelessWidget {
             Text(
                 'Account Activity, Booking Details & Invoices, Promotional details',
                 style: getTextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: primaryColor , decoration: TextDecoration.underline ,decorationColor: primaryColor ),
                 textAlign: TextAlign.center ,),

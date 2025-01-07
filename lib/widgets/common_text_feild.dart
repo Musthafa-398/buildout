@@ -73,7 +73,7 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
       fillColor: widget.filColor ?? colorFFFFFF,
       hintText: widget.hintText,
       hintStyle: getTextStyle(
-          fontSize: 16, fontWeight: FontWeight.w400, color: colorAFAFB6),
+          fontSize: 14, fontWeight: FontWeight.w400, color: colorAFAFB6),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
           width: 1.5,

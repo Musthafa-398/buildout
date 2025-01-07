@@ -28,73 +28,75 @@ class EnterNumberScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Align(
-              alignment: Alignment.center,
-              child: Image.asset(
-                Images.login,
-                height: 215.h,
-                width: 244.w,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Align(
+                alignment: Alignment.center,
+                child: Image.asset(
+                  Images.login,
+                  height: 215.h,
+                  width: 244.w,
+                ),
               ),
-            ),
-            H(42),
-            Text(
-              'OTP Verification',
-              style: getTextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(0xff00040D)),
-            ),
-            H(24),
-            Text(
-              'We will send you an One Time Password\nOn this mobile number',
-              textAlign: TextAlign.center,
-              style: getTextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(0xffAFAFB6)),
-            ),
-            H(100),
-            Text(
-              'Enter Mobile Number',
-              style: getTextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(0xff00040D)),
-            ),
-            H(24),
-            CommonTextFeild(
-              hintText: '1234-567-890',
-              prefixIcon: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  W(16),
-                  Text(
-                    '+91',
-                    style: getTextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400,
-                      color: const Color(0xffAFAFB6),
-                    ),
-                  ),W(6),
-                  const SizedBox(
-                      height: 54,
-                      child: VerticalDivider(
-                        thickness: 1.5,
-                        color: Color(0xffAFAFB6),
-                      )) ,
-                ],
+              H(42),
+              Text(
+                'OTP Verification',
+                style: getTextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w700,
+                    color: const Color(0xff00040D)),
               ),
-            ),
-            const Spacer(),
-             CommonButton(text: 'Generate OTP' , onPressed: (){
-              Navigator.pushNamed(context, OtpScreen.route);
-             }),
-            H(100),
-          ],
+              H(24),
+              Text(
+                'We will send you an One Time Password\nOn this mobile number',
+                textAlign: TextAlign.center,
+                style: getTextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: const Color(0xffAFAFB6)),
+              ),
+              H(50),
+              Text(
+                'Enter Mobile Number',
+                style: getTextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: const Color(0xff00040D)),
+              ),
+              H(24),
+              CommonTextFeild(
+                hintText: '1234-567-890',
+                prefixIcon: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    W(16),
+                    Text(
+                      '+91',
+                      style: getTextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: const Color(0xffAFAFB6),
+                      ),
+                    ),W(6),
+                    const SizedBox(
+                        height: 54,
+                        child: VerticalDivider(
+                          thickness: 1.5,
+                          color: Color(0xffAFAFB6),
+                        )) ,
+                  ],
+                ),
+              ),
+              H(100),
+               CommonButton(text: 'Generate OTP' , onPressed: (){
+                Navigator.pushNamed(context, OtpScreen.route);
+               }),
+              
+            ],
+          ),
         ),
       ),
     );

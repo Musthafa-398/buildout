@@ -32,15 +32,15 @@ class LocationPermissionScreen extends StatelessWidget {
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Image.asset(
                 Images.locationPermission,
-                height: 427.h,
-                width: 427.w,
+                height: 400.h,
+                width: 400.w,
                 fit: BoxFit.cover,
               ),
               H(30),
               Text(
-                'Location permission not enabled',
+                'Location permission not enabled',textAlign: TextAlign.center,
                 style: getTextStyle(
-                    fontSize: 24,
+                    fontSize: 22,
                     fontWeight: FontWeight.w700,
                     color: const Color(0xff00040D)),
               ),
@@ -48,7 +48,7 @@ class LocationPermissionScreen extends StatelessWidget {
               Text(
                 'Sharing Location permission help us improve your booking and pickup experience',
                 style: getTextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xff00040D)),
                 textAlign: TextAlign.center,
@@ -68,7 +68,7 @@ class LocationPermissionScreen extends StatelessWidget {
               CommonButton(
                 text: 'Do it manually',
                 textStyle: getTextStyle(
-                    fontSize: 20,
+                    fontSize: 16,
                     fontWeight: FontWeight.w700,
                     color: primaryColor),
                 bgcolor: Colors.white,

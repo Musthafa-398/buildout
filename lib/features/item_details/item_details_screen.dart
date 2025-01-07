@@ -46,7 +46,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     '1 × 3 ft Air grill horizontal louvers',
                     style: getTextStyle(
-                        fontSize: 22,
+                        fontSize: 20,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xff00040D)),
                   ),
@@ -54,7 +54,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Container(
                     margin: EdgeInsets.only(top: 16.h),
                     padding:
-                        EdgeInsets.symmetric(horizontal: 24.w, vertical: 8.5),
+                        EdgeInsets.symmetric(horizontal: 18.w, vertical:6),
                     decoration: BoxDecoration(
                         color: primaryColor.withValues(alpha: .1),
                         borderRadius: BorderRadius.circular(12)),
@@ -71,7 +71,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                         Text(
                           '6k+ Bought',
                           style: getTextStyle(
-                              fontSize: 14,
+                              fontSize: 13,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xff00040D)),
                         )
@@ -85,7 +85,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                       Text(
                         'Ready to Ship',
                         style: getTextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontWeight: FontWeight.w400,
                             color: const Color(0xff00040D)),
                       ),
@@ -125,7 +125,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'Offers',
                     style: getTextStyle(
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xff434343)),
                   ),
@@ -140,7 +140,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                         _priceCard(price: '₹350.05', isColor: false),
                         W(18),
                         Container(
-                            height: 110.h,
+                            height: 140.h,
                             width: 125.w,
                             padding: EdgeInsets.symmetric(horizontal: 9.w),
                             decoration: BoxDecoration(
@@ -184,7 +184,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'Quantity',
                     style: getTextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff434343)),
                   ),
@@ -221,7 +221,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                               '$totalQuantity',
                               textAlign: TextAlign.center,
                               style: getTextStyle(
-                                  fontSize: 18,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   color: const Color(0xff434343)),
                             )),
@@ -247,7 +247,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                       Text(
                         'Bag',
                         style: getTextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontWeight: FontWeight.w400,
                             color: const Color(0xff8E8E8E)),
                       )
@@ -257,7 +257,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'Min. Order Qty. 80 Bag',
                     style: getTextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff8E8E8E)),
                   ),
@@ -297,20 +297,20 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                           text: TextSpan(
                               text: 'Get GST invoice and',
                               style: getTextStyle(
-                                  fontSize: 17,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w400,
                                   color: const Color(0xff434343)),
                               children: [
                                 TextSpan(
                                     text: ' save up to 28% ',
                                     style: getTextStyle(
-                                        fontSize: 17,
+                                        fontSize: 15,
                                         fontWeight: FontWeight.w700,
                                         color: const Color(0xff434343))),
                                 TextSpan(
                                     text: 'on business purchases.',
                                     style: getTextStyle(
-                                        fontSize: 17,
+                                        fontSize: 15,
                                         fontWeight: FontWeight.w400,
                                         color: const Color(0xff434343)))
                               ]),
@@ -328,7 +328,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'Sold by   MAMSONS INDIA STEEL PROCESSORS',
                     style: getTextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff434343)),
                   ),
@@ -356,7 +356,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                               'Trusted',
                               style: getTextStyle(
                                   color: const Color(0xff434343),
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w700),
                             )
                           ],
@@ -376,7 +376,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                             Text(
                               '4.3',
                               style: getTextStyle(
-                                  fontSize: 14,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w700,
                                   color: primaryColor),
                             ),
@@ -403,7 +403,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                             Text(
                               'Surat',
                               style: getTextStyle(
-                                  fontSize: 14,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w400,
                                   color: const Color(0xff8E8E8E)),
                             ),
@@ -431,7 +431,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'Specification',
                     style: getTextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xff434343)),
                   ),
@@ -456,7 +456,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'About the product',
                     style: getTextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xff434343)),
                   ),
@@ -464,7 +464,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'Country of Origin',
                     style: getTextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff434343)),
                   ),
@@ -472,7 +472,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'India',
                     style: getTextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff434343)),
                   ),
@@ -498,8 +498,8 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
                       children: [
                         SvgPicture.asset(
                           Images.bag,
-                          height: 30.h,
-                          width: 30.w,
+                          height: 25.h,
+                          width: 25.w,
                           fit: BoxFit.cover,
                           colorFilter: const ColorFilter.mode(
                               Colors.white, BlendMode.srcIn),
@@ -508,7 +508,7 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
                         Text(
                           'Add to Cart',
                           style: getTextStyle(
-                              fontSize: 18,
+                              fontSize: 16,
                               fontWeight: FontWeight.w700,
                               color: Colors.white),
                         )
@@ -527,7 +527,7 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
 
   Container _priceCard({required String price, bool isColor = true}) {
     return Container(
-      height: 110.h,
+      height: 140.h,
       width: 125.w,
       padding: EdgeInsets.symmetric(horizontal: 9.w, vertical: 16.h),
       decoration: BoxDecoration(
@@ -614,7 +614,7 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
         Text(
           description,
           style: getTextStyle(
-              fontSize: 17, fontWeight: FontWeight.w400, color: primaryColor),
+              fontSize: 15, fontWeight: FontWeight.w400, color: primaryColor),
         )
       ],
     );
@@ -634,14 +634,14 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
           Text(
             title,
             style: getTextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff8E8E8E)),
           ),
           Text(
             value,
             style: getTextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff434343)),
           )

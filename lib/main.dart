@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'config/app_routes.dart';
 import 'constants/text_styles.dart';
+import 'features/otp_verify/enter_number_screen.dart';
 import 'utils/providers.dart';
 
 void main() {
@@ -26,14 +27,14 @@ class MyApp extends StatelessWidget {
                 elevation: 0,
                 titleSpacing: 6,
                 titleTextStyle: getTextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xff00040D))),
             scaffoldBackgroundColor: const Color(0xffF7FAFF),
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          initialRoute: MasterScreen.route,
+          initialRoute: EnterNumberScreen.route,
           onGenerateRoute: Routes.genericRoute,
         );
       },

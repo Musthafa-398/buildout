@@ -174,7 +174,7 @@ class _ItemsSeeAllScreenState extends State<ItemsSeeAllScreen> {
           Text(
             item.title,
             style: getTextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: selectedIndex == item.id
                     ? primaryColor

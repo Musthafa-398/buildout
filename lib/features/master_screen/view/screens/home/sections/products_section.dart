@@ -108,7 +108,7 @@ class ProductsSection extends StatelessWidget {
         Text(
           title,
           style: getTextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w700,
               color: const Color(0xff00040D)),
         ),
@@ -119,7 +119,7 @@ class ProductsSection extends StatelessWidget {
           child: Text(
             'View All',
             style: getTextStyle(
-                fontSize: 16, fontWeight: FontWeight.w700, color: primaryColor),
+                fontSize: 14, fontWeight: FontWeight.w700, color: primaryColor),
           ),
         )
       ],
