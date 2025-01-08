@@ -44,7 +44,7 @@ class MapScreen extends StatelessWidget {
                       Marker(
                           height: 84.h,
                           width: 84.w,
-                          point: LatLng(12.971599, 77.594566),
+                          point: const LatLng(12.971599, 77.594566),
                           child: SvgPicture.asset(
                             Images.marker,
                             fit: BoxFit.fill,
@@ -101,7 +101,7 @@ class MapScreen extends StatelessWidget {
                                 child: Text(
                                   'Hustlehub Tech Park Building',
                                   style: getTextStyle(
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.w700,
                                       color: const Color(0xff434343)),
                                 ),
@@ -119,7 +119,7 @@ class MapScreen extends StatelessWidget {
                           Text(
                             'Sector 2, HSR Layout, Bengaluru, Karnataka',
                             style: getTextStyle(
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xff434343)),
                           )

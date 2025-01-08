@@ -15,48 +15,40 @@ class AddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: const CommonBackButton(),
+        centerTitle: true,
+        title: Text('My Address',
+            style: getTextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+                color: primaryColor)),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, AddAddressScreen.route);
+            },
+            icon: const Icon(Icons.add_circle_outline_outlined,
+                fill: 1, color: Colors.black, size: 35),
+          )
+        ],
+      ),
       body: Column(
         children: [
           Container(
-            // height: 50,
+            height: 10.h,
             decoration: BoxDecoration(
                 color: Colors.white,
                 border: const Border(
                     bottom: BorderSide(color: Color(0xffAFAFB6), width: 1)),
                 boxShadow: [
                   BoxShadow(
-                      blurStyle: BlurStyle.outer,
-                      offset: const Offset(0.0, 0.75),
+                      offset: const Offset(0, 1),
                       blurRadius: 19,
                       spreadRadius: 0,
                       color: primaryColor.withValues(alpha: .25))
                 ]),
-            child: Column(
-              children: [
-                H(30),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10.w),
-                  child: Row(
-                    children: [
-                      const CommonBackButton(),
-                      const Spacer(),
-                      Text('My Address',
-                          style: getTextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              color: primaryColor)),
-                      const Spacer(),
-                     IconButton(onPressed: (){
-Navigator.pushNamed(context, AddAddressScreen.route);
-
-                     }, icon: const Icon(Icons.add_circle_outline_outlined,
-                            fill: 1, color: Colors.black, size: 35),)
-                    ],
-                  ),
-                ),
-                H(5)
-              ],
-            ),
           ),
           Expanded(
               child: Padding(

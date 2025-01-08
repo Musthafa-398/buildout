@@ -53,7 +53,7 @@ class AddressCard extends StatelessWidget {
               Text(
                 '2972 Westheimer Rd. Santa Ana,\nIllinois 85486',
                 style: getTextStyle(
-                    fontSize: 16,
+                    fontSize: 15,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xff8E8E8E)),
               ),

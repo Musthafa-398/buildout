@@ -73,7 +73,7 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                                   fontWeight: FontWeight.w400,
                                   color: const Color(0xff434343)),
                             ),
-                            H(18),
+                            H(15),
                             Row(
                               children: [
                                 SvgPicture.asset(
@@ -108,7 +108,7 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                         Text(
                           'Allow quotes from other brands',
                           style: getTextStyle(
-                              fontSize: 16,
+                              fontSize: 15,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xff434343)),
                         )
@@ -147,7 +147,7 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                                 '$totalQuantity',
                                 textAlign: TextAlign.center,
                                 style: getTextStyle(
-                                    fontSize: 18,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xff434343)),
                               )),
@@ -173,7 +173,7 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                         Text(
                           'Bag',
                           style: getTextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xff8E8E8E)),
                         )
@@ -190,7 +190,7 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                         hintText: 'Select date',
                         readOnly: true,
                         suffixIcon: Padding(
-                          padding: const EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(13),
                           child: SvgPicture.asset(
                             Images.calendar,
                             height: 20.h,
@@ -229,7 +229,7 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                           Text(
                             'Upload Documents for Reference',
                             style: getTextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w700,
                                 color: primaryColor),
                           )

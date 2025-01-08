@@ -46,7 +46,7 @@ class OfferCard extends StatelessWidget {
                 child: Text(
                   'Seasonal Offer',
                   style: getTextStyle(
-                      fontSize: 15,
+                      fontSize: 14,
                       fontWeight: FontWeight.w400,
                       color: primaryColor),
                 ),

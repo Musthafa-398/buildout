@@ -21,7 +21,8 @@ class _OfferScreenState extends State<OfferScreen> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(      appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.white,
         leading: const CommonBackButton(),
         centerTitle: true,
@@ -33,7 +34,7 @@ class _OfferScreenState extends State<OfferScreen> {
       ),
       body: Column(
         children: [
-             Container(
+          Container(
             height: 10.h,
             decoration: BoxDecoration(
                 color: Colors.white,
@@ -50,92 +51,98 @@ class _OfferScreenState extends State<OfferScreen> {
           Expanded(
               child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Column(children: [
-                    H(30),
-                    Stack(
-                      // alignment: Alignment.bottomCenter,
-                      children: [
-                        SizedBox(
-                          height: 145.h,
-                          child: PageView.builder(
-                              itemCount: 3,
-                              itemBuilder: (context, index) {
-                                return Container(
-                                  height: 145.h,
-                                  padding:
-                                      EdgeInsets.only(bottom: 4.h, right: 65.w),
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                      color: primaryColor.withValues(alpha: .3),
-                                      borderRadius: BorderRadius.circular(10),
-                                      boxShadow: [
-                                        BoxShadow(
-                                            offset: const Offset(1, 1),
-                                            blurRadius: 10.4,
-                                            spreadRadius: 0,
-                                            color: const Color(0xff000000)
-                                                .withValues(alpha: .15))
-                                      ]),
-                                  alignment: Alignment.bottomRight,
-                                  child: SvgPicture.asset(
-                                    Images.offer3,
-                                    height: 89.h,
-                                    width: 89.w,
-                                    fit: BoxFit.cover,
-                                  ),
-                                );
-                              },
-                              onPageChanged: (value) => setState(() {
-                                    selectedIndex = value;
-                                  })),
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Align(
-                              alignment: Alignment.topCenter,
-                              child: Padding(
-                                padding: const EdgeInsets.all(12),
-                                child: Text(
-                                  'Get 10% off on purchases over ₹5000',
-                                  style: getTextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w400,
-                                      color: const Color(0xff00040D)),
-                                ),
-                              ),
-                            ),
-                            H(30),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: List.generate(
-                                  3,
-                                  (index) => Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 3.w),
-                                    height: 8.h,
-                                    width: 8.w,
+                  child: SingleChildScrollView(
+                    child: Column(children: [
+                      H(30),
+                      Stack(
+                        // alignment: Alignment.bottomCenter,
+                        children: [
+                          SizedBox(
+                            height: 145.h,
+                            child: PageView.builder(
+                                itemCount: 3,
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    height: 145.h,
+                                    padding: EdgeInsets.only(
+                                        bottom: 4.h, right: 65.w),
+                                    width: double.infinity,
                                     decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: selectedIndex == index
-                                            ? const Color(0xff434343)
-                                            : const Color(0xff8E8E8E)),
+                                        color:
+                                            primaryColor.withValues(alpha: .3),
+                                        borderRadius: BorderRadius.circular(10),
+                                        boxShadow: [
+                                          BoxShadow(
+                                              offset: const Offset(1, 1),
+                                              blurRadius: 10.4,
+                                              spreadRadius: 0,
+                                              color: const Color(0xff000000)
+                                                  .withValues(alpha: .15))
+                                        ]),
+                                    alignment: Alignment.bottomRight,
+                                    child: SvgPicture.asset(
+                                      Images.offer3,
+                                      height: 89.h,
+                                      width: 89.w,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  );
+                                },
+                                onPageChanged: (value) => setState(() {
+                                      selectedIndex = value;
+                                    })),
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Align(
+                                alignment: Alignment.topCenter,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(12),
+                                  child: Text(
+                                    'Get 10% off on purchases over ₹5000',
+                                    style: getTextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: const Color(0xff00040D)),
                                   ),
                                 ),
                               ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                    H(30),
-                   ListView.separated(
-                    shrinkWrap: true,
-                    padding: EdgeInsets.zero,
-                    itemBuilder: (context, index) => const OfferCard(), separatorBuilder: (context, index) => H(30), itemCount: 2)
-                  ])))
+                              H(26),
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: List.generate(
+                                    3,
+                                    (index) => Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 3.w),
+                                      height: 8.h,
+                                      width: 8.w,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: selectedIndex == index
+                                              ? const Color(0xff434343)
+                                              : const Color(0xff8E8E8E)),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      H(30),
+                      ListView.separated(
+                          physics: NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          padding: EdgeInsets.zero,
+                          itemBuilder: (context, index) => const OfferCard(),
+                          separatorBuilder: (context, index) => H(30),
+                          itemCount: 2)
+                    ]),
+                  )))
         ],
       ),
     );

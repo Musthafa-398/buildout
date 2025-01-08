@@ -19,45 +19,32 @@ class AddAddressScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: const CommonBackButton(),
+        centerTitle: true,
+        title: Text('New Address',
+            style: getTextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+                color: primaryColor)),
+     
+      ),
       body: Column(
         children: [
-          Container(
-            // height: 50,
+                Container(
+            height: 10.h,
             decoration: BoxDecoration(
                 color: Colors.white,
                 border: const Border(
                     bottom: BorderSide(color: Color(0xffAFAFB6), width: 1)),
                 boxShadow: [
                   BoxShadow(
-                      blurStyle: BlurStyle.outer,
-                      offset: const Offset(0.0, 0.75),
+                      offset: const Offset(0, 1),
                       blurRadius: 19,
                       spreadRadius: 0,
                       color: primaryColor.withValues(alpha: .25))
                 ]),
-            child: Column(
-              children: [
-                H(30),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10.w),
-                  child: Row(
-                    children: [
-                      const CommonBackButton(),
-                      const Spacer(),
-                      Text('New Address',
-                          style: getTextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              color: primaryColor)),
-                      const Spacer(),
-                      const SizedBox(width: 20)
-                    ],
-                  ),
-                ),
-                H(5)
-              ],
-            ),
           ),
           H(25),
           Expanded(
@@ -67,7 +54,7 @@ class AddAddressScreen extends StatelessWidget {
                   Stack(
                     children: [
                       SizedBox(
-                        height: 171.h,
+                        height: 190.h,
                         width: double.infinity,
                         child: FlutterMap(
                           options: const MapOptions(
@@ -99,7 +86,7 @@ class AddAddressScreen extends StatelessWidget {
                       ),
                       Positioned(
                       left: 20,bottom: 8,
-                          child: Text('Enter Complete address' , style: getTextStyle(fontSize: 18 , fontWeight: FontWeight.w700 , color: Color(0xffF7FAFF)),))
+                          child: Text('Enter Complete address' , style: getTextStyle(fontSize: 18 , fontWeight: FontWeight.w700 , color: const Color(0xffF7FAFF)),))
                     ],
                   ),
                   H(24),
@@ -218,7 +205,7 @@ class AddAddressScreen extends StatelessWidget {
                             Text(
                               'Set as your default address',
                               style: getTextStyle(
-                                  fontSize: 16,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0xff434343)),
                             )

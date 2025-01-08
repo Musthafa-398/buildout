@@ -119,7 +119,7 @@ class CheckoutScreen extends StatelessWidget {
                         Text(
                           'Apply coupon code',
                           style: getTextStyle(
-                              fontSize: 17,
+                              fontSize: 16,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xff00040D)),
                         ),
@@ -193,9 +193,11 @@ class CheckoutScreen extends StatelessWidget {
                               text: 'Add address +',
                               textStyle: getTextStyle(
                                   fontSize: 14,
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: FontWeight.w400,
                                   color: primaryColor),
-                              bgcolor: Colors.white,onPressed: () => Navigator.pushNamed(context, AddressScreen.route),
+                              bgcolor: Color(0xffF7FAFF),borderWidth: 1,
+                              onPressed: () => Navigator.pushNamed(
+                                  context, AddressScreen.route),
                             )
                           ],
                         ),

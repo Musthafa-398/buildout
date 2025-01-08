@@ -69,7 +69,7 @@ class OfferDetailsScreen extends StatelessWidget {
                     Text(
                       'Invite a friend and both get \$20 off your next purchase.',
                       style: getTextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.w700,
                           color: const Color(0xff00040D)),
                     ),
@@ -77,7 +77,7 @@ class OfferDetailsScreen extends StatelessWidget {
                     Text(
                       'The "Invite a Friend and Both Get \$20 Off Your Next Purchase" program is designed to reward our loyal customers while helping them share the benefits of our platform with friends and family. This referral program is simple, beneficial, and ensures both the inviter (referrer) and their invited friend (referee) enjoy savings on future purchases.',
                       style: getTextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.w400,
                           color: const Color(0xff434343)),
                     ),
@@ -85,7 +85,7 @@ class OfferDetailsScreen extends StatelessWidget {
                     Text(
                       'Your unique invite code',
                       style: getTextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.w400,
                           color: const Color(0xffAFAFB6)),
                     ),
@@ -97,7 +97,7 @@ class OfferDetailsScreen extends StatelessWidget {
                         W(3),
                         Text('https://buildout.com/0001',
                             style: getTextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: primaryColor))
                       ],
@@ -110,7 +110,7 @@ class OfferDetailsScreen extends StatelessWidget {
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
                           color: primaryColor),
-                      bgcolor: Colors.white,
+                      bgcolor: const Color(0xffF7FAFF),
                       borderWidth: 1,
                     )
                   ])))

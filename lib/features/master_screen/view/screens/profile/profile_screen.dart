@@ -41,7 +41,7 @@ class ProfileScreen extends StatelessWidget {
                       Text(
                         'Profile',
                         style: getTextStyle(
-                            fontSize: 22,
+                            fontSize: 20,
                             fontWeight: FontWeight.w700,
                             color: const Color(0xffF7FAFF)),
                       ),
@@ -58,7 +58,7 @@ class ProfileScreen extends StatelessWidget {
                           child: Text(
                             'Edit Profile',
                             style: getTextStyle(
-                                fontSize: 16,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xffF7FAFF)),
                           ),
@@ -67,10 +67,10 @@ class ProfileScreen extends StatelessWidget {
                       W(8)
                     ],
                   ),
-                  H(20),
+                  H(27),
                   Container(
                     height: 95.h,
-                    width: 95,
+                    width: 95.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         color: const Color(0xffF7FAFF)),
@@ -86,18 +86,18 @@ class ProfileScreen extends StatelessWidget {
                   Text(
                     'Abhinash Sharma',
                     style: getTextStyle(
-                        fontSize: 24,
+                        fontSize: 22,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xffF7FAFF)),
                   ),
                   Text('+123-456789',
                       style: getTextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: const Color(0xffF7FAFF))),
                   Text('You are our customer since 2021',
                       style: getTextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: const Color(0xffF7FAFF))),
                 ],

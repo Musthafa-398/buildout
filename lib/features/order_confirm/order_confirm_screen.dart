@@ -43,7 +43,7 @@ class OrderConfirmScreen extends StatelessWidget {
                     'Thank you for your order you will\nreceive email confirmation shortly.',
                     textAlign: TextAlign.center,
                     style: getTextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff434343)),
                   ),
@@ -53,21 +53,21 @@ class OrderConfirmScreen extends StatelessWidget {
                     text: TextSpan(
                         text: 'Check the status of your order\non the',
                         style: getTextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.w400,
                             color: const Color(0xff434343)),
                         children: [
                           TextSpan(
                             text: ' order tracking ',
                             style: getTextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w700,
                                 color: const Color(0xff434343)),
                           ),
                           TextSpan(
                             text: 'page.',
                             style: getTextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xff434343)),
                           )
@@ -88,7 +88,7 @@ class OrderConfirmScreen extends StatelessWidget {
                     bgcolor: const Color(0xffF7FAFF),
                     text: 'Back',
                     textStyle: getTextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xff434343)),
                     onPressed: () {
