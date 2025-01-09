@@ -14,6 +14,8 @@ import '../features/location_permission/location_permission_screen.dart';
 import '../features/master_screen/view/master_screen.dart';
 import '../features/master_screen/view/screens/offers/offer_details_screen.dart';
 import '../features/master_screen/view/screens/offers/offer_screen.dart';
+import '../features/order/order_details_screen.dart';
+import '../features/order/order_listing_screen.dart';
 import '../features/order_confirm/order_confirm_screen.dart';
 import '../features/otp_verify/enter_number_screen.dart';
 import '../features/otp_verify/otp_screen.dart';
@@ -98,6 +100,14 @@ class Routes {
              case MapScreen.route:
         return MaterialPageRoute(
           builder: (context) => const MapScreen(),
+        );
+             case OrderListingScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const OrderListingScreen(),
+        );
+            case OrderDetailsScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const OrderDetailsScreen(),
         );
       default:
         return null;

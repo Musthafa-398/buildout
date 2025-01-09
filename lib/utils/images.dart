@@ -42,6 +42,10 @@ class Images {
   static const String market = 'assets/icons/market.svg';
 
   static const String mail = 'assets/icons/mail.svg';
+  static const String track = 'assets/icons/track.svg';
+
+  static const String cancel = 'assets/icons/cancel.svg';
+
 
   static const String profile = 'assets/icons/profile.svg';
   static const String ship = 'assets/icons/ship.svg';

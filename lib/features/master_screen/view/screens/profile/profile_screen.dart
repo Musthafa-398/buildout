@@ -1,6 +1,7 @@
 import 'package:build_out/constants/colors.dart';
 import 'package:build_out/constants/text_styles.dart';
 import 'package:build_out/features/master_screen/view_model/master_view_model.dart';
+import 'package:build_out/features/order/order_listing_screen.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +116,9 @@ class ProfileScreen extends StatelessWidget {
                 H(16),
                 _profileTile(icon: Images.bag, title: 'Cart'),
                 H(16),
-                _profileTile(icon: Images.order, title: 'My Orders'),
+                _profileTile(icon: Images.order, title: 'My Orders' , onTap: () {
+                  Navigator.pushNamed(context,OrderListingScreen.route);
+                },),
                 H(16),
                 _profileTile(
                     icon: Images.scheme,
