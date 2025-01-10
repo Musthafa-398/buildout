@@ -196,11 +196,102 @@ class OrderDetailsScreen extends StatelessWidget {
                             const Icon(
                               Icons.keyboard_arrow_up_rounded,
                               color: Color(0xff8E8E8E),
-                              size: 30,
+                              size: 34,
                             )
                           ],
                         ),
+                        H(16),
+                        _dataRow(title: 'Payment Details', value: ' ₹ 340'),
+                        _dataRow(
+                            title: 'Promo Code',
+                            value: 'BOXPJ',
+                            textStyle: getTextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                                color: primaryColor)),
+                        _dataRow(title: 'Delivery fee', value: '0'),
+                        _dataRow(title: 'Total', value: ' ₹ 340'),
+                        H(28),
+                        Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Status',
+                                  style: getTextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xff8E8E8E)),
+                                ),
+                                H(3),
+                                Text(
+                                  'Confirmed',
+                                  style: getTextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w700,
+                                      color: primaryColor),
+                                ),
+                              ],
+                            ),
+                            Spacer(),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Need help?',
+                                  style: getTextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xff8E8E8E)),
+                                ),
+                                H(3),
+                                Text(
+                                  'Enquire',
+                                  style: getTextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xff434343)),
+                                ),
+                              ],
+                            ),
+                            W(12),
+                            SvgPicture.asset(
+                              Images.help,
+                              height: 34.h,
+                              width: 34.w,
+                              fit: BoxFit.cover,
+                            )
+                          ],
+                        )
                       ])))
         ]));
+  }
+
+  Padding _dataRow(
+      {required String title, required String value, TextStyle? textStyle}) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: getTextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Color(0xff8E8E8E)),
+          ),
+          Text(
+            value,
+            style: textStyle ??
+                getTextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xff434343)),
+          )
+        ],
+      ),
+    );
   }
 }

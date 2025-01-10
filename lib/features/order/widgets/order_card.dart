@@ -63,6 +63,7 @@ class OrderCard extends StatelessWidget {
               bgcolor: Color(0xffF7FAFF),
               borderRadius: 4,
               size: Size(125.w, 41.h),onPressed: () {
+                Navigator.pushNamed(context, OrderDetailsScreen.route);
               },
             )
           ],

@@ -7,6 +7,7 @@ import '../features/category_select/view/category_select_screen.dart';
 import '../features/checkout/view/checkout_screen.dart';
 import '../features/create_account/create_account_screen.dart';
 import '../features/create_request/view/create_request_screen.dart';
+import '../features/help/chat_screen.dart';
 import '../features/help/help_screen.dart';
 import '../features/item_details/item_details_screen.dart';
 import '../features/items_see_all/items_see_all_screen.dart';
@@ -14,6 +15,7 @@ import '../features/location_permission/location_permission_screen.dart';
 import '../features/master_screen/view/master_screen.dart';
 import '../features/master_screen/view/screens/offers/offer_details_screen.dart';
 import '../features/master_screen/view/screens/offers/offer_screen.dart';
+import '../features/notification/view/notification_screen.dart';
 import '../features/order/order_details_screen.dart';
 import '../features/order/order_listing_screen.dart';
 import '../features/order_confirm/order_confirm_screen.dart';
@@ -108,6 +110,14 @@ class Routes {
             case OrderDetailsScreen.route:
         return MaterialPageRoute(
           builder: (context) => const OrderDetailsScreen(),
+        );
+         case NotificationScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const NotificationScreen(),
+        );
+          case ChatScreen.route:
+        return MaterialPageRoute(
+          builder: (context) => const ChatScreen(),
         );
       default:
         return null;

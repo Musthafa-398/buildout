@@ -3,11 +3,13 @@ import 'package:build_out/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../../constants/colors.dart';
 import '../../../../../constants/text_styles.dart';
 import '../../../../../widgets/common_back_button.dart';
 import '../../../../../widgets/gap.dart';
+import '../../../view_model/master_view_model.dart';
 
 class OfferScreen extends StatefulWidget {
   static const route = '/offer-screen';
@@ -20,11 +22,14 @@ class OfferScreen extends StatefulWidget {
 class _OfferScreenState extends State<OfferScreen> {
   int selectedIndex = 0;
   @override
+                      
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: const CommonBackButton(),
+        leading:  CommonBackButton(onPressed: () {
+              context.read<MasterViewModel>().selectedIndex = 0;
+        },),
         centerTitle: true,
         title: Text('Offers',
             style: getTextStyle(

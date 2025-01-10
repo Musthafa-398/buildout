@@ -45,6 +45,14 @@ class Images {
   static const String track = 'assets/icons/track.svg';
 
   static const String cancel = 'assets/icons/cancel.svg';
+  static const String help = 'assets/icons/help.svg';
+  static const String order2 = 'assets/icons/order2.svg';
+  static const String orderCancel = 'assets/icons/order_cancel.svg';
+
+
+  static const String delivery = 'assets/icons/delivery.svg';
+
+
 
 
   static const String profile = 'assets/icons/profile.svg';

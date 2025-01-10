@@ -3,6 +3,7 @@ import 'package:build_out/constants/text_styles.dart';
 import 'package:build_out/features/category_select/model/category_model.dart';
 import 'package:build_out/features/help/help_screen.dart';
 import 'package:build_out/features/master_screen/view/screens/home/home_screen.dart';
+import 'package:build_out/features/notification/view/notification_screen.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
@@ -64,9 +65,13 @@ class DrawerSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 ItemModel item = itemsList[index];
                 return ListTile(
-                  onTap: () {
+                  
+                  onTap: () {    scaffoldKey.currentState?.closeDrawer();
+                    if(index==8){
+                      Navigator.pushNamed(context, NotificationScreen.route);
+
+                    }else
                     if (index == 9) {
-                      scaffoldKey.currentState?.closeDrawer();
                       Navigator.pushNamed(context, HelpScreen.route);
                     }
                   },
