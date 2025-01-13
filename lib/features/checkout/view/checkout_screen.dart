@@ -195,7 +195,7 @@ class CheckoutScreen extends StatelessWidget {
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
                                   color: primaryColor),
-                              bgcolor: Color(0xffF7FAFF),borderWidth: 1,
+                              bgcolor: const Color(0xffF7FAFF),borderWidth: 1,
                               onPressed: () => Navigator.pushNamed(
                                   context, AddressScreen.route),
                             )

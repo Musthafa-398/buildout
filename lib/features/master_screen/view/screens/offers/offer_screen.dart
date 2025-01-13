@@ -140,7 +140,7 @@ class _OfferScreenState extends State<OfferScreen> {
                       ),
                       H(30),
                       ListView.separated(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           padding: EdgeInsets.zero,
                           itemBuilder: (context, index) => const OfferCard(),

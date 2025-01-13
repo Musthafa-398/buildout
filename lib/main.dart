@@ -1,4 +1,5 @@
 import 'package:build_out/features/master_screen/view/master_screen.dart';
+import 'package:build_out/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          initialRoute: MasterScreen.route,
+          initialRoute: SplashScreen.route,
           onGenerateRoute: Routes.genericRoute,
         );
       },

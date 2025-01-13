@@ -57,50 +57,52 @@ class _HelpScreenState extends State<HelpScreen> {
           Expanded(
               child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //
-                        H(18),
-                        Row(
-                          children: [
-                            _selectableCard('Active'),
-                            W(12),
-                            _selectableCard('Closed'),
-                          ],
-                        ),
-                        H(30),
-
-                        ListView.separated(
-                            physics: const NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,
-                            padding: EdgeInsets.zero,
-                            itemBuilder: (context, index) {
-                              return TicketCard(status: selectedTitle);
-                            },
-                            separatorBuilder: (context, index) => H(18),
-                            itemCount: 2),
-
-                        //
-                        H(30),
-                        Text(
-                          'Create Ticket',
-                          style: getTextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w700,
-                              color: const Color(0xff434343)),
-                        ),
-                        H(18),
-                        ListView.separated(
-                            physics: const NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,
-                            padding: EdgeInsets.zero,
-                            itemBuilder: (context, index) {
-                              return _helpTile(title: itemList[index]);
-                            },
-                            separatorBuilder: (context, index) => H(18),
-                            itemCount: itemList.length)
-                      ])))
+                  child: SingleChildScrollView(
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          //
+                          H(18),
+                          Row(
+                            children: [
+                              _selectableCard('Active'),
+                              W(12),
+                              _selectableCard('Closed'),
+                            ],
+                          ),
+                          H(30),
+                    
+                          ListView.separated(
+                              physics: const NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              padding: EdgeInsets.zero,
+                              itemBuilder: (context, index) {
+                                return TicketCard(status: selectedTitle);
+                              },
+                              separatorBuilder: (context, index) => H(18),
+                              itemCount: 2),
+                    
+                          //
+                          H(30),
+                          Text(
+                            'Create Ticket',
+                            style: getTextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0xff434343)),
+                          ),
+                          H(18),
+                          ListView.separated(
+                              physics: const NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              padding: EdgeInsets.zero,
+                              itemBuilder: (context, index) {
+                                return _helpTile(title: itemList[index]);
+                              },
+                              separatorBuilder: (context, index) => H(18),
+                              itemCount: itemList.length) ,     H(18),
+                        ]),
+                  )))
         ],
       ),
     );

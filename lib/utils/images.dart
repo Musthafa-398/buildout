@@ -51,6 +51,8 @@ class Images {
 
 
   static const String delivery = 'assets/icons/delivery.svg';
+  static const String send = 'assets/icons/send.svg';
+
 
 
 
@@ -90,6 +92,7 @@ class Images {
 
 
 
+  static const String person = 'assets/images/person.png';
 
   static const String profileBG = 'assets/images/profile_bg.svg';
   static const String profilePic = 'assets/images/dp.svg';

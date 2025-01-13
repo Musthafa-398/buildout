@@ -7,7 +7,7 @@ import '../constants/colors.dart';
 class CommonTextFeild extends StatefulWidget {
   final String? textHead;
   final String? hintText;
-  final Color? filColor;
+  final Color? filledColor;
   final Color? textColor;
   final Color? borderColor;
   final int? maxLine;
@@ -27,6 +27,7 @@ class CommonTextFeild extends StatefulWidget {
   final List<TextInputFormatter>? inputFormatters;
   final bool? readOnly;
   final bool?isMandatory;
+  final TextStyle?hintStyle;
   const CommonTextFeild(
       {super.key,
       this.onTap,
@@ -39,7 +40,7 @@ class CommonTextFeild extends StatefulWidget {
       this.keyboardType,
       this.autofillHints,
       this.controller,
-      this.filColor,
+      this.filledColor,
       this.prefixIcon,
       this.textColor,
       this.focusNode,
@@ -49,7 +50,7 @@ class CommonTextFeild extends StatefulWidget {
       this.inputFormatters,
       this.borderRadius,
       this.borderColor = colorAFAFB6,
-      this.readOnly , this.isMandatory=false});
+      this.readOnly , this.isMandatory=false, this.hintStyle});
 
   @override
   State<CommonTextFeild> createState() => _CommonTextFeildState();
@@ -70,9 +71,9 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
       contentPadding: EdgeInsets.symmetric(
           vertical: widget.contentPadVertical ?? 16, horizontal: 12),
       filled: true,
-      fillColor: widget.filColor ?? colorFFFFFF,
+      fillColor: widget.filledColor ?? colorFFFFFF,
       hintText: widget.hintText,
-      hintStyle: getTextStyle(
+      hintStyle:widget.hintStyle?? getTextStyle(
           fontSize: 14, fontWeight: FontWeight.w400, color: colorAFAFB6),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
@@ -84,9 +85,10 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
       focusedBorder: OutlineInputBorder(
         borderSide:  BorderSide(
           width: 1.5,
-          color: primaryColor.withValues(alpha: .6),
+          color:widget.borderColor ?? primaryColor.withValues(alpha: .6),
         ),
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
+        
       ),
      
     );

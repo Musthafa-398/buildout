@@ -155,7 +155,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                   Text(
                                     '₹ Price on\nRequest',
                                     style: getTextStyle(
-                                        fontSize: 14,
+                                        fontSize: 15,
                                         fontWeight: FontWeight.w700),
                                   ),
                                   H(4),
@@ -164,7 +164,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: getTextStyle(
-                                        fontSize: 10,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w400,
                                         color: const Color(0xff434343)),
                                   ),
@@ -172,7 +172,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                   Text(
                                     'More than 5001 Bag',
                                     style: getTextStyle(
-                                        fontSize: 10,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.w400,
                                         color: const Color(0xff434343)),
                                   ),
@@ -257,7 +257,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   Text(
                     'Min. Order Qty. 80 Bag',
                     style: getTextStyle(
-                        fontSize: 11,
+                        fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff8E8E8E)),
                   ),
@@ -274,7 +274,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                           TextSpan(
                             text: 'Total: Get quotations within 24 hours',
                             style: getTextStyle(
-                                fontSize: 12,
+                                fontSize: 13,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xff00040D)),
                           )
@@ -527,7 +527,7 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
 
   Container _priceCard({required String price, bool isColor = true}) {
     return Container(
-      height: 140.h,
+      height: 155.h,
       width: 125.w,
       padding: EdgeInsets.symmetric(horizontal: 9.w, vertical: 16.h),
       decoration: BoxDecoration(
@@ -541,14 +541,14 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
             text: TextSpan(
                 text: price,
                 style: getTextStyle(
-                    fontSize: 14,
+                    fontSize: 15,
                     fontWeight: FontWeight.w700,
                     color: const Color(0xff00040D)),
                 children: [
                   TextSpan(
                     text: '/Bag',
                     style: getTextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff00040D)),
                   )
@@ -558,7 +558,7 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
           Text(
             '₹288 + ₹80.60 GST',
             style: getTextStyle(
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff434343)),
           ),
@@ -567,14 +567,14 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
             text: TextSpan(
                 text: '₹380 ',
                 style: getTextStyle(
-                    fontSize: 10,
+                    fontSize: 12,
                     fontWeight: FontWeight.w700,
                     color: const Color(0xff00040D)),
                 children: [
                   TextSpan(
                     text: '(5% off)',
                     style: getTextStyle(
-                        fontSize: 10,
+                        fontSize: 12,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xffD21015)),
                   )
@@ -584,7 +584,7 @@ Navigator.pushNamed(context, CreateRequestScreen.route);
           Text(
             '500 - 2000 Bag',
             style: getTextStyle(
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff434343)),
           )

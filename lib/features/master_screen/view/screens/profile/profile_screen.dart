@@ -106,35 +106,39 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           H(38),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
-            child: Column(
-              children: [
-                _profileTile(icon: Images.contact, title: 'My Address' , onTap: () {
-                  Navigator.pushNamed(context, AddressScreen.route);
-                },),
-                H(16),
-                _profileTile(icon: Images.bag, title: 'Cart'),
-                H(16),
-                _profileTile(icon: Images.order, title: 'My Orders' , onTap: () {
-                  Navigator.pushNamed(context,OrderListingScreen.route);
-                },),
-                H(16),
-                _profileTile(
-                    icon: Images.scheme,
-                    title: 'Scheme & Offers',
-                    showArrow: false),
-                H(16),
-                _profileTile(
-                  icon: Images.logout,
-                  title: 'Logout',
-                  showArrow: false,
-                  textStyle: getTextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: const Color(0xffD21015)),
-                )
-              ],
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    _profileTile(icon: Images.contact, title: 'My Address' , onTap: () {
+                      Navigator.pushNamed(context, AddressScreen.route);
+                    },),
+                    H(16),
+                    _profileTile(icon: Images.bag, title: 'Cart'),
+                    H(16),
+                    _profileTile(icon: Images.order, title: 'My Orders' , onTap: () {
+                      Navigator.pushNamed(context,OrderListingScreen.route);
+                    },),
+                     H(16),
+                    _profileTile(
+                        icon: Images.scheme,
+                        title: 'Scheme & Offers',
+                        showArrow: false),
+                    H(16),
+                    _profileTile(
+                      icon: Images.logout,
+                      title: 'Logout',
+                      showArrow: false,
+                      textStyle: getTextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: const Color(0xffD21015)),
+                    ) , H(16)
+                  ],
+                ),
+              ),
             ),
           )
         ],

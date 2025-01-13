@@ -1,23 +1,20 @@
 import 'package:build_out/features/help/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../constants/text_styles.dart';
 import '../../../widgets/gap.dart';
 
 class TicketCard extends StatelessWidget {
   final String status;
-  const TicketCard({
-    super.key,
-    required this.status,
-  });
+  const TicketCard({super.key, required this.status});
 
   @override
   Widget build(BuildContext context) {
     bool isActive = status == 'Active';
-    return InkWell(onTap: () {
-      Navigator.pushNamed(context, ChatScreen.route);
-    },
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, ChatScreen.route);
+      },
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.all(20),

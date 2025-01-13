@@ -25,7 +25,7 @@ class LookingForWidget extends StatelessWidget {
           Text(
             'Looking for something specific?',
             style: getTextStyle(
-                fontSize: 16,
+                fontSize: 17,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xff434343)),
           ),
@@ -34,7 +34,7 @@ class LookingForWidget extends StatelessWidget {
             'Tell us your requirements and we will call you back shortly',
             textAlign: TextAlign.center,
             style: getTextStyle(
-                fontSize: 12,
+                fontSize: 13,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff434343)),
           ),
@@ -45,7 +45,7 @@ class LookingForWidget extends StatelessWidget {
             borderRadius: 4,
             bgcolor: Colors.transparent,
             textStyle: getTextStyle(
-                fontSize: 14,
+                fontSize: 15,
                 fontWeight: FontWeight.w400,
                 color: primaryColor),
             borderWidth: 1,

@@ -29,7 +29,7 @@ class NotificationCard extends StatelessWidget {
                 boxShadow: [
                   BoxShadow(
                       offset: const Offset(0, 0),
-                      blurRadius: 18.8,
+                      blurRadius: 15,
                       spreadRadius: 0,
                       blurStyle: BlurStyle.outer,
                       color: const Color(0xff000000).withValues(alpha: .2))
@@ -54,16 +54,16 @@ class NotificationCard extends StatelessWidget {
                     Text(
                     notificationModel.title,
                       style: getTextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.w400,
-                          color:notificationModel.title=='Order Canceled'?Color(0xffD21015): Color(0xff00040D)),
+                          color:notificationModel.title=='Order Canceled'?const Color(0xffD21015): const Color(0xff00040D)),
                     ),
                     Text(
                     notificationModel.time,
                       style: getTextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xff8E8E8E)),
+                          color: const Color(0xff8E8E8E)),
                     )
                   ],
                 ),
@@ -71,9 +71,9 @@ class NotificationCard extends StatelessWidget {
                 Text(
                notificationModel.body,
                   style: getTextStyle(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff434343)),
+                      color: const Color(0xff434343)),
                 )
               ],
             ))

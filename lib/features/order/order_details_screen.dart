@@ -69,7 +69,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                   Text(
                                     'Order ID #123456',
                                     style: getTextStyle(
-                                        fontSize: 18,
+                                        fontSize: 17,
                                         fontWeight: FontWeight.w400,
                                         color: const Color(0xff00040D)),
                                   ),
@@ -77,7 +77,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                   Text(
                                     'ACC Concrete Cement',
                                     style: getTextStyle(
-                                        fontSize: 14,
+                                        fontSize: 13,
                                         fontWeight: FontWeight.w400,
                                         color: const Color(0xff8E8E8E)),
                                   ),
@@ -108,7 +108,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                   Text(
                                     'Track',
                                     style: getTextStyle(
-                                        fontSize: 18,
+                                        fontSize: 17,
                                         fontWeight: FontWeight.w400,
                                         color: const Color(0xff434343)),
                                   )
@@ -135,7 +135,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                   Text(
                                     'Cancel',
                                     style: getTextStyle(
-                                        fontSize: 18,
+                                        fontSize: 17,
                                         fontWeight: FontWeight.w400,
                                         color: const Color(0xff434343)),
                                   )
@@ -151,7 +151,7 @@ class OrderDetailsScreen extends StatelessWidget {
                             Text(
                               'Delivery Address',
                               style: getTextStyle(
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0xff00040D)),
                             ),
@@ -160,7 +160,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                 child: Text(
                                   'Edit',
                                   style: getTextStyle(
-                                      fontSize: 16,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.w400,
                                       color: primaryColor),
                                 ))
@@ -170,7 +170,7 @@ class OrderDetailsScreen extends StatelessWidget {
                         Text(
                           '2972 Westheimer Rd. Santa Ana,',
                           style: getTextStyle(
-                              fontSize: 16,
+                              fontSize: 15,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xff434343)),
                         ),
@@ -178,7 +178,7 @@ class OrderDetailsScreen extends StatelessWidget {
                         Text(
                           '+123-456789',
                           style: getTextStyle(
-                              fontSize: 16,
+                              fontSize: 15,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xff434343)),
                         ),
@@ -189,7 +189,7 @@ class OrderDetailsScreen extends StatelessWidget {
                             Text(
                               'Payment Details',
                               style: getTextStyle(
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0xff00040D)),
                             ),
@@ -206,7 +206,7 @@ class OrderDetailsScreen extends StatelessWidget {
                             title: 'Promo Code',
                             value: 'BOXPJ',
                             textStyle: getTextStyle(
-                                fontSize: 18,
+                                fontSize: 17,
                                 fontWeight: FontWeight.w700,
                                 color: primaryColor)),
                         _dataRow(title: 'Delivery fee', value: '0'),
@@ -220,38 +220,38 @@ class OrderDetailsScreen extends StatelessWidget {
                                 Text(
                                   'Status',
                                   style: getTextStyle(
-                                      fontSize: 18,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.w400,
-                                      color: Color(0xff8E8E8E)),
+                                      color: const Color(0xff8E8E8E)),
                                 ),
                                 H(3),
                                 Text(
                                   'Confirmed',
                                   style: getTextStyle(
-                                      fontSize: 18,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.w700,
                                       color: primaryColor),
                                 ),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   'Need help?',
                                   style: getTextStyle(
-                                      fontSize: 18,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.w400,
-                                      color: Color(0xff8E8E8E)),
+                                      color: const Color(0xff8E8E8E)),
                                 ),
                                 H(3),
                                 Text(
                                   'Enquire',
                                   style: getTextStyle(
-                                      fontSize: 18,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xff434343)),
+                                      color: const Color(0xff434343)),
                                 ),
                               ],
                             ),
@@ -278,17 +278,17 @@ class OrderDetailsScreen extends StatelessWidget {
           Text(
             title,
             style: getTextStyle(
-                fontSize: 18,
+                fontSize: 17,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff8E8E8E)),
+                color: const Color(0xff8E8E8E)),
           ),
           Text(
             value,
             style: textStyle ??
                 getTextStyle(
-                    fontSize: 18,
+                    fontSize: 17,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xff434343)),
+                    color: const Color(0xff434343)),
           )
         ],
       ),

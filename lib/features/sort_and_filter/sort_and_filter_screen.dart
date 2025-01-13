@@ -30,8 +30,8 @@ class SortAndFilterScreen extends StatelessWidget {
                 onPressed: () {},
                 icon: SvgPicture.asset(
                   Images.search,
-                  height: 20.h,
-                  width: 20.w,
+                  height: 25.h,
+                  width: 25.w,
                   fit: BoxFit.cover,
                   colorFilter: const ColorFilter.mode(
                       Color(0xff434343), BlendMode.srcIn),
@@ -44,8 +44,8 @@ class SortAndFilterScreen extends StatelessWidget {
                 onPressed: () {},
                 icon: SvgPicture.asset(
                   Images.drawerIcon9,
-                  height: 20.h,
-                  width: 20.w,
+                  height: 25.h,
+                  width: 25.w,
                   fit: BoxFit.cover,
                   colorFilter: const ColorFilter.mode(
                       Color(0xff434343), BlendMode.srcIn),
@@ -58,8 +58,8 @@ class SortAndFilterScreen extends StatelessWidget {
                 onPressed: () {},
                 icon: SvgPicture.asset(
                   Images.drawerIcon6,
-                  height: 20.h,
-                  width: 20.w,
+                  height: 25.h,
+                  width: 25.w,
                   fit: BoxFit.cover,
                   colorFilter: const ColorFilter.mode(
                       Color(0xff434343), BlendMode.srcIn),

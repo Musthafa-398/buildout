@@ -24,7 +24,7 @@ class StepperSection extends StatelessWidget {
         children: [
           Text('How Request for Quotation works ?',
               style: getTextStyle(
-                fontSize: 16,
+                fontSize: 17,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xff434343),
               )),
