@@ -79,6 +79,8 @@ class Images {
   static const String logout = 'assets/icons/logout.svg';
   static const String link = 'assets/icons/link.svg';
   static const String marker = 'assets/icons/marker.svg';
+  static const String logo = 'assets/images/logo.png';
+
 
 
 

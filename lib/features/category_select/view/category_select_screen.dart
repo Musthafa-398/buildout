@@ -33,48 +33,55 @@ class CategorySelectScreen extends StatelessWidget {
             leadingWidth: 80.w),
         body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
-            child:
-                Column(
-                  children: [
-                    Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                      H(100),
-                                      Text(
-                        'Category',
-                        style: getTextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w700,
-                            color: const Color(0xff00040D)),
-                                      ),
-                                      H(18),
-                                      ListView.separated(
-                                        physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          padding: EdgeInsets.zero,
-                          itemBuilder: (context, index) {
-                            ItemModel categoryModel =
-                                categorySelectViewModel.categoryList[index];
-                            return InkWell(
-                                onTap: () {
-                                  categorySelectViewModel.selectedCategory =
-                                      categoryModel;
-                                },
-                                child: CategoryCard(categoryModel: categoryModel));
-                          },
-                          separatorBuilder: (context, index) => H(12),
-                          itemCount: categorySelectViewModel.categoryList.length),
-                                 
-                                    ]),
-                      ),
-                    ),     H(15),
-                                      CommonButton(
-                        text: 'Done',
-                        onPressed: () {
-                          Navigator.pushNamed(context, LocationPermissionScreen.route);
-                        },
-                                      ) , H(10)
-                  ],
-                )));
+            child: Column(
+              children: [
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [   H(40),
+                          Image.asset(Images.logo,
+                              height: 50, width: double.infinity),
+                                 H(40),
+                          Text(
+                            'Category',
+                            style: getTextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0xff00040D)),
+                          ),
+                          H(18),
+                          ListView.separated(
+                              physics: const NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              padding: EdgeInsets.zero,
+                              itemBuilder: (context, index) {
+                                ItemModel categoryModel =
+                                    categorySelectViewModel.categoryList[index];
+                                return InkWell(
+                                    onTap: () {
+                                      categorySelectViewModel.selectedCategory =
+                                          categoryModel;
+                                    },
+                                    child: CategoryCard(
+                                        categoryModel: categoryModel));
+                              },
+                              separatorBuilder: (context, index) => H(12),
+                              itemCount:
+                                  categorySelectViewModel.categoryList.length),
+                        ]),
+                  ),
+                ),
+                H(15),
+                CommonButton(
+                  text: 'Done',
+                  onPressed: () {
+                    Navigator.pushNamed(
+                        context, LocationPermissionScreen.route);
+                  },
+                ),
+                H(30)
+              ],
+            )));
   }
 }

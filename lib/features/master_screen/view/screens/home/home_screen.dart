@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
 class HomeScreen extends StatelessWidget {
@@ -39,6 +38,8 @@ class HomeScreen extends StatelessWidget {
                       color: const Color(0xff00040D)),
                 ),
                 const Spacer(),
+                Image.asset(Images.logo, height: 30.h, width: 210.w),
+                 const Spacer(),
                 IconButton(
                     onPressed: () {
                       Navigator.pushNamed(context, SortAndFilterScreen.route);

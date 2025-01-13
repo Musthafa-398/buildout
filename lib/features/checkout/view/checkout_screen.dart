@@ -51,7 +51,10 @@ class CheckoutScreen extends StatelessWidget {
                             fontWeight: FontWeight.w700,
                             color: const Color(0xff00040D)),
                       ),
-                      const Spacer(),
+                     const Spacer(),
+                Image.asset(Images.logo, height: 30.h, width: 210.w),
+                 const Spacer(),
+                 W(10),
                       IconButton(
                           onPressed: () {},
                           icon: SvgPicture.asset(Images.bag,
@@ -246,21 +249,29 @@ class CheckoutScreen extends StatelessWidget {
                     ),
                   ),
                   H(50),
-                  CommonButton(
-                    child: Row(
+                  CommonButton(child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SvgPicture.asset(Images.bag, height: 30.h, width: 30.w),
+                        SvgPicture.asset(
+                          Images.bag,
+                          height: 25.h,
+                          width: 25.w,
+                          fit: BoxFit.cover,
+                          colorFilter: const ColorFilter.mode(
+                              Colors.white, BlendMode.srcIn),
+                        ),
                         W(10),
                         Text(
-                          'Proceed to checkout',
+                            'Proceed to checkout',
                           style: getTextStyle(
-                              fontSize: 18,
+                              fontSize: 16,
                               fontWeight: FontWeight.w700,
-                              color: const Color(0xffF7FAFF)),
+                              color: Colors.white),
                         )
                       ],
                     ),
+              
                     onPressed: () {
                       Navigator.pushNamed(context, OrderConfirmScreen.route);
                     },

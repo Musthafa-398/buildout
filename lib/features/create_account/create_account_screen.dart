@@ -32,7 +32,9 @@ class CreateAccountScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            H(150),
+            H(40),
+            Image.asset(Images.logo , height: 50,width: double.infinity),
+            H(130),
             Text(
               'Create your account',
               style: getTextStyle(

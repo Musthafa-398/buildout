@@ -1,6 +1,7 @@
 import 'package:build_out/features/otp_verify/enter_number_screen.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatefulWidget {
   static const route = '/splash-screen';
@@ -22,11 +23,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-            child: Image.asset(
-      Images.splash,
-      fit: BoxFit.fill,
-    )));
+    return Scaffold(backgroundColor: const Color(0xffF7FAFF),
+        body: Padding(
+          padding:  EdgeInsets.symmetric(horizontal:60.w ),
+          child: Center(
+              child: Image.asset(
+                Images.logo,
+                fit: BoxFit.fill,
+              )),
+        ));
   }
 }
