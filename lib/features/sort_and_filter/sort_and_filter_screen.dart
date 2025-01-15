@@ -75,23 +75,23 @@ class SortAndFilterScreen extends StatelessWidget {
             child: Column(
               children: [
                 H(10),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 22.w),
-                  child: Row(
-                    children: [
-                      _itemCard('All', true),
-                      W(12),
-                      _itemCard('Ready to ship', false),
-                    ],
-                  ),
-                ),
-                H(15),
+                // Padding(
+                //   padding: EdgeInsets.symmetric(horizontal: 22.w),
+                //   child: Row(
+                //     children: [
+                //       _itemCard('All', true),
+                //       W(12),
+                //       _itemCard('Ready to ship', false),
+                //     ],
+                //   ),
+                // ),
+                // H(15),
                 const Divider(
                   color: Color(0xffAFAFB6),
                   thickness: 1,
                   height: 0,
                 ),
-                H(8),
+                H(19),
               ],
             ),
           ),
@@ -146,66 +146,66 @@ class SortAndFilterScreen extends StatelessWidget {
                   H(24),
                   const LookingForWidget(),
                   H(30),
-                  Row(
-                    children: [
-                      Expanded(
-                          child: CommonButton(
-                        size: Size(double.infinity, 50.h),
-                        bgcolor: Colors.white,
-                        borderRadius: 4,
-                        borderWidth: 1,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              Images.sort,
-                              height: 30.h,
-                              width: 30.w,
-                              fit: BoxFit.cover,
-                            ),
-                            W(6),
-                            Text(
-                              'SORT',
-                              style: getTextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700,
-                                  color: primaryColor),
-                            )
-                          ],
-                        ),
-                        onPressed: () {},
-                      )),
-                      W(10),
-                      Expanded(
-                          child: CommonButton(
-                        size: Size(double.infinity, 50.h),
-                        bgcolor: Colors.white,
-                        borderRadius: 4,
-                        borderWidth: 1,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              Images.filter,
-                              height: 30.h,
-                              width: 30.w,
-                              fit: BoxFit.cover,
-                            ),
-                            W(6),
-                            Text(
-                              'FILTER',
-                              style: getTextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700,
-                                  color: primaryColor),
-                            )
-                          ],
-                        ),
-                        onPressed: () {},
-                      )),
-                    ],
-                  ),
-                  H(30)
+                  // Row(
+                  //   children: [
+                  //     Expanded(
+                  //         child: CommonButton(
+                  //       size: Size(double.infinity, 50.h),
+                  //       bgcolor: Colors.white,
+                  //       borderRadius: 4,
+                  //       borderWidth: 1,
+                  //       child: Row(
+                  //         mainAxisAlignment: MainAxisAlignment.center,
+                  //         children: [
+                  //           SvgPicture.asset(
+                  //             Images.sort,
+                  //             height: 30.h,
+                  //             width: 30.w,
+                  //             fit: BoxFit.cover,
+                  //           ),
+                  //           W(6),
+                  //           Text(
+                  //             'SORT',
+                  //             style: getTextStyle(
+                  //                 fontSize: 16,
+                  //                 fontWeight: FontWeight.w700,
+                  //                 color: primaryColor),
+                  //           )
+                  //         ],
+                  //       ),
+                  //       onPressed: () {},
+                  //     )),
+                  //     W(10),
+                  //     Expanded(
+                  //         child: CommonButton(
+                  //       size: Size(double.infinity, 50.h),
+                  //       bgcolor: Colors.white,
+                  //       borderRadius: 4,
+                  //       borderWidth: 1,
+                  //       child: Row(
+                  //         mainAxisAlignment: MainAxisAlignment.center,
+                  //         children: [
+                  //           SvgPicture.asset(
+                  //             Images.filter,
+                  //             height: 30.h,
+                  //             width: 30.w,
+                  //             fit: BoxFit.cover,
+                  //           ),
+                  //           W(6),
+                  //           Text(
+                  //             'FILTER',
+                  //             style: getTextStyle(
+                  //                 fontSize: 16,
+                  //                 fontWeight: FontWeight.w700,
+                  //                 color: primaryColor),
+                  //           )
+                  //         ],
+                  //       ),
+                  //       onPressed: () {},
+                  //     )),
+                  //   ],
+                  // ),
+                  // H(30)
                 ],
               ),
             ),

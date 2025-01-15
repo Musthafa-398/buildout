@@ -140,7 +140,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                         _priceCard(price: '₹350.05', isColor: false),
                         W(18),
                         Container(
-                            height: 140.h,
+                            height: 155.h,
                             width: 125.w,
                             padding: EdgeInsets.symmetric(horizontal: 9.w),
                             decoration: BoxDecoration(
@@ -482,11 +482,11 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   _aboutProductCard(Images.returnIcon, '7 Days Return'),
                   H(9),
                   _aboutProductCard(Images.payment, 'Payment Protection'),
-                  H(16),
-                  const StepperSection(),
+                  // H(16),
+                  // const StepperSection(),
                   H(16),
                   const LookingForWidget(),
-                  H(37),
+                  H(40),
                    CommonButton(text: 'Enquiry now' , onPressed: () {
 Navigator.pushNamed(context, CreateRequestScreen.route);
                   },),

@@ -61,95 +61,66 @@ class _ItemsSeeAllScreenState extends State<ItemsSeeAllScreen> {
                   ]),
             ),
             Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                      width: 162.w,
-                      // height: 700,
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          border: Border(
-                              right: BorderSide(
-                                  color: Color(0xffAFAFB6), width: .3))),
-                      child: ListView.separated(
-                          // shrinkWrap: true,
-                          padding: EdgeInsets.zero,
-                          itemBuilder: (context, index) {
-                            return leftCard(
-                              itemsList[index],
-                            );
-                          },
-                          separatorBuilder: (context, index) => const Divider(
-                                color: Color(0xffAFAFB6),
-                                thickness: .3,
-                                height: 0,
-                              ),
-                          itemCount: itemsList.length)),
-                  Expanded(
-                      child: Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 19.w, vertical: 17.h),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Adhesives',
-                            style: getTextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xff00040D)),
-                          ),
-                          H(18),
-                          GridView.builder(physics: const NeverScrollableScrollPhysics(),
-                            itemCount: itemsList1.length,
-                            padding: EdgeInsets.zero,
-                            shrinkWrap: true,
-                            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                childAspectRatio: 97 / 130,
-                                crossAxisCount: 2,
-                                crossAxisSpacing: 20.w,
-                                mainAxisSpacing: 18.h),
-                            itemBuilder: (context, index) {
-                              ItemModel item = itemsList1[index];
-                              return HomeScreenItemCard(
-                                  title: item.title, image: item.image ?? '');
-                            },
-                          ),
-                          H(30),
-                          Text(
-                            'Sealants',
-                            style: getTextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xff00040D)),
-                          ),
-                          H(18),
-                          GridView.builder(physics: const NeverScrollableScrollPhysics(),
-                            itemCount: itemsList2.length,
-                            padding: EdgeInsets.zero,
-                            shrinkWrap: true,
-                            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                childAspectRatio: 97 / 130,
-                                crossAxisCount: 2,
-                                crossAxisSpacing: 20.w,
-                                mainAxisSpacing: 18.h),
-                            itemBuilder: (context, index) {
-                              ItemModel item = itemsList2[index];
-                              return HomeScreenItemCard(
-                                  title: item.title, image: item.image ?? '');
-                            },
-                          ) ,
-                          H(30)
-                        
-                        ],
-                      ),
+                child: Padding(
+              padding:
+                  EdgeInsets.symmetric(horizontal: 19.w, vertical: 17.h),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Adhesives',
+                      style: getTextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xff00040D)),
                     ),
-                  ))
-                ],
+                    H(18),
+                    GridView.builder(physics: const NeverScrollableScrollPhysics(),
+                      itemCount: itemsList1.length,
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          childAspectRatio: 97 / 130,
+                          crossAxisCount: 3,
+                          crossAxisSpacing: 20.w,
+                          mainAxisSpacing: 18.h),
+                      itemBuilder: (context, index) {
+                        ItemModel item = itemsList1[index];
+                        return HomeScreenItemCard(
+                            title: item.title, image: item.image ?? '');
+                      },
+                    ),
+                    H(30),
+                    Text(
+                      'Sealants',
+                      style: getTextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xff00040D)),
+                    ),
+                    H(18),
+                    GridView.builder(physics: const NeverScrollableScrollPhysics(),
+                      itemCount: itemsList2.length,
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          childAspectRatio: 97 / 130,
+                          crossAxisCount: 3,
+                          crossAxisSpacing: 20.w,
+                          mainAxisSpacing: 18.h),
+                      itemBuilder: (context, index) {
+                        ItemModel item = itemsList2[index];
+                        return HomeScreenItemCard(
+                            title: item.title, image: item.image ?? '');
+                      },
+                    ) ,
+                    H(30)
+                  
+                  ],
+                ),
               ),
-            )
+            ))
           ],
         ));
   }

@@ -166,7 +166,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                 ))
                           ],
                         ),
-                        H(16),
+                        H(6),
                         Text(
                           '2972 Westheimer Rd. Santa Ana,',
                           style: getTextStyle(

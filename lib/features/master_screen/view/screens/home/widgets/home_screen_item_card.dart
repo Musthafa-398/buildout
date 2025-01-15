@@ -27,15 +27,13 @@ class HomeScreenItemCard extends StatelessWidget {
             border: Border.all(color: const Color(0xffAFAFB6), width: .6),
             borderRadius: BorderRadius.circular(6)),
         child: Column(
-          children: [
-            const Spacer(),
+          children: [H(18) , 
             Expanded(
                 child: Image.asset(
-              image,
+              image,height: 94.h,width: 75.w,
               fit: BoxFit.contain,
             )),
-            const Spacer(),
-            H(5),
+            H(14),
             Text(
               title,
               textAlign: TextAlign.center,

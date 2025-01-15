@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../../constants/colors.dart';
+
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
 class HomeScreen extends StatelessWidget {
@@ -51,8 +53,34 @@ class HomeScreen extends StatelessWidget {
                     )),
                 IconButton(
                     onPressed: () {},
-                    icon: SvgPicture.asset(Images.bag,
-                        height: 30.h, width: 30.w)),
+                    icon: Stack(
+                      children: [
+                        SvgPicture.asset(Images.bag,
+                            height: 30.h, width: 30.w),
+
+                                   Positioned(
+                                    top: 1,
+                                    right: .3,
+                                    child: Container(
+                                      height: 14,
+                                      width: 14,
+                                      decoration: BoxDecoration(
+                                          color: primaryColor,
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: const Color(0xffF7FAFF),
+                                              width: .5)),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        '2',
+                                        style: getTextStyle(
+                                            fontSize: 8,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white),
+                                      ),
+                                    ))
+                      ],
+                    )),
               ],
             ),
           ),
