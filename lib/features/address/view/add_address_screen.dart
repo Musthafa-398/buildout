@@ -73,7 +73,7 @@ class AddAddressScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(20),
                         child: CommonTextFeild(
-                            hintText: 'Search for area, street name...',
+                            hintText: 'Search for area, street name...',contentPadVertical: 0,
                             prefixIcon: IconButton(
                               onPressed: null,
                               icon: SvgPicture.asset(
@@ -193,15 +193,24 @@ class AddAddressScreen extends StatelessWidget {
                           textHead: 'Email Address',
                           isMandatory: true,
                         ),
-                        H(15),
+                        H(24),
                         Row(
                           children: [
-                            Checkbox(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(3)),
-                                activeColor: primaryColor,
-                                value: true,
-                                onChanged: (value) {}),
+                            // Checkbox(
+                            //     shape: RoundedRectangleBorder(
+                            //         borderRadius: BorderRadius.circular(3)),
+                            //     activeColor: primaryColor,
+                            //     value: true,
+                            //     onChanged: (value) {}),
+                               Container(
+                          height: 20.h,
+                          width: 20.w,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(3),
+                              color: primaryColor),
+                              child: const Icon(Icons.check , color: Colors.white  , size: 16),
+                        ),
+                      W(7),
                             Text(
                               'Set as your default address',
                               style: getTextStyle(

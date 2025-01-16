@@ -5,18 +5,30 @@ import 'package:build_out/features/order/order_listing_screen.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../address/view/address_screen.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
   @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  @override
+  void initState() {
+ SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(resizeToAvoidBottomInset: true,
       body: Column(
         children: [
           Stack(
@@ -27,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
                   H(50),
                   Row(
                     children: [
-                      W(8),
+                      W(10),
                       IconButton(
                         icon: SvgPicture.asset(
                           Images.backButton,

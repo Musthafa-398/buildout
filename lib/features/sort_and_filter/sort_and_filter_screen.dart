@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../utils/constants.dart';
 import '../../widgets/common_back_button.dart';
 import 'widgets/looking_for_widget.dart';
 
@@ -17,7 +18,7 @@ class SortAndFilterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+        appBar: AppBar(leadingWidth: leadingWidth,
           backgroundColor: Colors.white,
           leading: const CommonBackButton(),
           title: const Text('Instant Adhesive'),

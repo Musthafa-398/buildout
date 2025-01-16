@@ -68,6 +68,7 @@ class EnterNumberScreen extends StatelessWidget {
               H(24),
               CommonTextFeild(
                 hintText: '1234-567-890',
+                textAlign: TextAlign.center,
                 prefixIcon: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -80,21 +81,23 @@ class EnterNumberScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         color: const Color(0xffAFAFB6),
                       ),
-                    ),W(6),
+                    ),
+                    W(6),
                     const SizedBox(
                         height: 54,
                         child: VerticalDivider(
                           thickness: 1.5,
                           color: Color(0xffAFAFB6),
-                        )) ,
+                        )),
                   ],
                 ),
               ),
               H(100),
-               CommonButton(text: 'Generate OTP' , onPressed: (){
-                Navigator.pushNamed(context, OtpScreen.route);
-               }),
-              
+              CommonButton(
+                  text: 'Generate OTP',
+                  onPressed: () {
+                    Navigator.pushNamed(context, OtpScreen.route);
+                  }),
             ],
           ),
         ),

@@ -26,8 +26,9 @@ class CommonTextFeild extends StatefulWidget {
   final TextEditingController? controller;
   final List<TextInputFormatter>? inputFormatters;
   final bool? readOnly;
-  final bool?isMandatory;
-  final TextStyle?hintStyle;
+  final bool? isMandatory;
+  final TextStyle? hintStyle;
+  final TextAlign textAlign;
   const CommonTextFeild(
       {super.key,
       this.onTap,
@@ -50,7 +51,10 @@ class CommonTextFeild extends StatefulWidget {
       this.inputFormatters,
       this.borderRadius,
       this.borderColor = colorAFAFB6,
-      this.readOnly , this.isMandatory=false, this.hintStyle});
+      this.readOnly,
+      this.isMandatory = false,
+      this.hintStyle,
+      this.textAlign = TextAlign.start});
 
   @override
   State<CommonTextFeild> createState() => _CommonTextFeildState();
@@ -63,7 +67,7 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
       suffixIcon: widget.suffixIcon,
       border: OutlineInputBorder(
         borderSide: BorderSide(
-      width: 1.5,
+          width: 1.5,
           color: widget.borderColor ?? colorAFAFB6,
         ),
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
@@ -73,8 +77,9 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
       filled: true,
       fillColor: widget.filledColor ?? colorFFFFFF,
       hintText: widget.hintText,
-      hintStyle:widget.hintStyle?? getTextStyle(
-          fontSize: 14, fontWeight: FontWeight.w400, color: colorAFAFB6),
+      hintStyle: widget.hintStyle ??
+          getTextStyle(
+              fontSize: 14, fontWeight: FontWeight.w400, color: colorAFAFB6),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
           width: 1.5,
@@ -83,14 +88,12 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide:  BorderSide(
+        borderSide: BorderSide(
           width: 1.5,
-          color:widget.borderColor ?? primaryColor.withValues(alpha: .6),
+          color: widget.borderColor ?? primaryColor.withValues(alpha: .6),
         ),
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-        
       ),
-     
     );
   }
 
@@ -99,27 +102,27 @@ class _CommonTextFeildState extends State<CommonTextFeild> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (widget.textHead != null) ...[
-              RichText(
+          RichText(
             text: TextSpan(
                 text: widget.textHead!,
-                 style: getTextStyle(
-                fontSize: 14,
-                color: const Color(0xff434343),
-                fontWeight: FontWeight.w400),
+                style: getTextStyle(
+                    fontSize: 14,
+                    color: const Color(0xff434343),
+                    fontWeight: FontWeight.w400),
                 children: [
-                  if (widget.isMandatory==true)
+                  if (widget.isMandatory == true)
                     TextSpan(
                         text: '*',
                         style: getTextStyle(
-                            color:const Color(0xffD21015),
+                            color: const Color(0xffD21015),
                             fontSize: 13,
                             fontWeight: FontWeight.w500))
                 ]),
           ),
-        
           const SizedBox(height: 4),
         ],
         TextFormField(
+          textAlign: widget.textAlign,
           readOnly: widget.readOnly ?? false,
           onTapOutside: (event) =>
               FocusManager.instance.primaryFocus?.unfocus(),

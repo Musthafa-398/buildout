@@ -1,6 +1,7 @@
 import 'package:build_out/constants/text_styles.dart';
 import 'package:build_out/features/category_select/model/category_model.dart';
 import 'package:build_out/features/master_screen/view/screens/home/widgets/home_screen_item_card.dart';
+import 'package:build_out/utils/constants.dart';
 import 'package:build_out/widgets/common_back_button.dart';
 import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class _ItemsSeeAllScreenState extends State<ItemsSeeAllScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          leading: const CommonBackButton(),
+          leading: const CommonBackButton(),leadingWidth: leadingWidth,
           title: const Text('Adhesives & Sealants'),
         ),
         body: Column(

@@ -64,32 +64,38 @@ class DrawerSection extends StatelessWidget {
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 ItemModel item = itemsList[index];
-                return ListTile(
-                  
-                  onTap: () {    scaffoldKey.currentState?.closeDrawer();
-                    if(index==8){
-                      Navigator.pushNamed(context, NotificationScreen.route);
-
-                    }else
-                    if (index == 9) {
-                      Navigator.pushNamed(context, HelpScreen.route);
-                    }
-                  },
-                  leading: SvgPicture.asset(
-                    item.image ?? '',
-                    height: 25.h,
-                    width: 25.w,
-                    fit: BoxFit.cover,
+                return InkWell(  onTap: () {    scaffoldKey.currentState?.closeDrawer();
+                          if(index==8){
+                            Navigator.pushNamed(context, NotificationScreen.route);
+                      
+                          }else
+                          if (index == 9) {
+                            Navigator.pushNamed(context, HelpScreen.route);
+                          }
+                        },
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    child: Row(
+                      children: [
+                        W(20),
+                        SvgPicture.asset(
+                            item.image ?? '',
+                            height: 25.h,
+                            width: 25.w,
+                            fit: BoxFit.cover,
+                          ),
+                          W(10),
+                          Text(
+                            item.title,
+                            style: getTextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: const Color(0xff8E8E8E)),
+                          ),W(20)
+                      
+                      ],
+                    ),
                   ),
-                  title: Text(
-                    item.title,
-                    style: getTextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xff8E8E8E)),
-                  ),
-                  contentPadding:
-                      EdgeInsets.symmetric(horizontal: 20.w, vertical: 0),
                 );
               },
             ),

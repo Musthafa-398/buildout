@@ -98,7 +98,7 @@ class CheckoutScreen extends StatelessWidget {
                       separatorBuilder: (context, index) => const Divider(
                             color: Color(0xffAFAFB6),
                             height: 60,
-                            thickness: 1,
+                            thickness: .9,
                           ),
                       itemCount: 2),
                   H(30),

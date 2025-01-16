@@ -27,21 +27,25 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 10.w),
             child: Row(
               children: [
-                IconButton(
-                    onPressed: () {
-                      scaffoldKey.currentState?.openDrawer();
-                    },
-                    icon: SvgPicture.asset(Images.menu)),
-                Text(
-                  'MENU',
-                  style: getTextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                      color: const Color(0xff00040D)),
+                InkWell(splashColor: Colors.transparent,highlightColor: Colors.transparent,
+                  onTap: () => scaffoldKey.currentState?.openDrawer(),
+                  child: Row(
+                    children: [W(10),
+                      SvgPicture.asset(Images.menu),
+                      W(6),
+                      Text(
+                        'MENU',
+                        style: getTextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            color: const Color(0xff00040D)),
+                      ),
+                    ],
+                  ),
                 ),
                 const Spacer(),
                 Image.asset(Images.logo, height: 30.h, width: 210.w),
-                 const Spacer(),
+                const Spacer(),
                 IconButton(
                     onPressed: () {
                       Navigator.pushNamed(context, SortAndFilterScreen.route);
@@ -55,41 +59,40 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {},
                     icon: Stack(
                       children: [
-                        SvgPicture.asset(Images.bag,
-                            height: 30.h, width: 30.w),
-
-                                   Positioned(
-                                    top: 1,
-                                    right: .3,
-                                    child: Container(
-                                      height: 14,
-                                      width: 14,
-                                      decoration: BoxDecoration(
-                                          color: primaryColor,
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                              color: const Color(0xffF7FAFF),
-                                              width: .5)),
-                                      alignment: Alignment.center,
-                                      child: Text(
-                                        '2',
-                                        style: getTextStyle(
-                                            fontSize: 8,
-                                            fontWeight: FontWeight.w700,
-                                            color: Colors.white),
-                                      ),
-                                    ))
+                        SvgPicture.asset(Images.bag, height: 30.h, width: 30.w),
+                        Positioned(
+                            top: 1,
+                            right: .3,
+                            child: Container(
+                              height: 14,
+                              width: 14,
+                              decoration: BoxDecoration(
+                                  color: primaryColor,
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                      color: const Color(0xffF7FAFF),
+                                      width: .5)),
+                              alignment: Alignment.center,
+                              child: Text(
+                                '2',
+                                style: getTextStyle(
+                                    fontSize: 8,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white),
+                              ),
+                            ))
                       ],
                     )),
               ],
             ),
           ),
         ),
-        H(15),
+        H(8),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: CommonTextFeild(
               hintText: 'Search products',
+              borderRadius: 9,
               prefixIcon: IconButton(
                 onPressed: null,
                 icon: SvgPicture.asset(

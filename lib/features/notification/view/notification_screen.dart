@@ -1,4 +1,5 @@
 import 'package:build_out/features/notification/model/notification_model.dart';
+import 'package:build_out/utils/constants.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class NotificationScreen extends StatelessWidget {
           time: '16/08/2023'),
     ];
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(leadingWidth: leadingWidth,
         backgroundColor: Colors.white,
         leading: const CommonBackButton(),
         centerTitle: true,

@@ -1,3 +1,4 @@
+import 'package:build_out/utils/constants.dart';
 import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +29,7 @@ class _HelpScreenState extends State<HelpScreen> {
     ];
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white,leadingWidth: leadingWidth,
         leading: const CommonBackButton(),
         centerTitle: true,
         title: Text('Help',

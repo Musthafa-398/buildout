@@ -1,5 +1,6 @@
 import 'package:build_out/constants/colors.dart';
 import 'package:build_out/constants/text_styles.dart';
+import 'package:build_out/utils/constants.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/common_button.dart';
 import 'package:build_out/widgets/gap.dart';
@@ -19,7 +20,7 @@ class MapScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(leadingWidth: leadingWidth,
         backgroundColor: Colors.white,
         leading: const CommonBackButton(),
         title: const Text('Confirm delivery location'),
@@ -55,7 +56,7 @@ class MapScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: CommonTextFeild(
-                      hintText: 'Search for area, street name...',
+                      hintText: 'Search for area, street name...',contentPadVertical: 0,
                       prefixIcon: IconButton(
                         onPressed: null,
                         icon: SvgPicture.asset(
@@ -93,7 +94,7 @@ class MapScreen extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     Expanded(
-                      child: Column(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [

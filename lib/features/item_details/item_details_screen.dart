@@ -2,6 +2,7 @@ import 'package:build_out/constants/colors.dart';
 import 'package:build_out/constants/text_styles.dart';
 import 'package:build_out/features/create_request/view/create_request_screen.dart';
 import 'package:build_out/features/sort_and_filter/widgets/looking_for_widget.dart';
+import 'package:build_out/utils/constants.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/common_back_button.dart';
 import 'package:build_out/widgets/common_button.dart';
@@ -25,7 +26,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: const CommonBackButton()),
+      appBar: AppBar(leading: const CommonBackButton() , leadingWidth: leadingWidth,),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,14 +122,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                     thickness: .5,
                     height: 0,
                   ),
-                  H(16),
-                  Text(
-                    'Offers',
-                    style: getTextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xff434343)),
-                  ),
+               
                   H(16),
                   //extra----------------------------------------------------------------
                   SingleChildScrollView(
@@ -279,6 +273,13 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                 color: const Color(0xff00040D)),
                           )
                         ]),
+                  ),   H(16),
+                  Text(
+                    'Offers',
+                    style: getTextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w700,
+                        color: const Color(0xff434343)),
                   ),
                   H(16),
 
@@ -487,7 +488,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   H(16),
                   const LookingForWidget(),
                   H(40),
-                   CommonButton(text: 'Enquiry now' , onPressed: () {
+                   CommonButton(text: 'Request for Quote' , onPressed: () {
 Navigator.pushNamed(context, CreateRequestScreen.route);
                   },),
                   H(18),

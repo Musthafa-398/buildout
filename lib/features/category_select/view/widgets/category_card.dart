@@ -47,8 +47,8 @@ class CategoryCard extends StatelessWidget {
          Consumer<CategorySelectViewModel>(builder: (context, provider, child) {
           bool isSelected = provider.selectedCategory.id==categoryModel.id;
            return  Container(
-            height: 33.h,
-            width: 33.w,
+            height: 29.h,
+            width: 29.w,
             decoration: BoxDecoration(
               color: isSelected?primaryColor:Colors.white,
                 shape: BoxShape.circle,

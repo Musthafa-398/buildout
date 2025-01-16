@@ -1,3 +1,4 @@
+import 'package:build_out/utils/constants.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class OrderListingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+        appBar: AppBar(leadingWidth: leadingWidth,
           backgroundColor: Colors.white,
           leading: const CommonBackButton(),
           centerTitle: true,

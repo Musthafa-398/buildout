@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants/colors.dart';
+import '../../../utils/constants.dart';
 import '../../../widgets/common_back_button.dart';
 
 class CreateRequestScreen extends StatefulWidget {
@@ -26,6 +27,7 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        leadingWidth: leadingWidth,
         leading: const CommonBackButton(),
         title: const Text('Create Request for Quote'),
       ),
@@ -99,12 +101,15 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                     H(24),
                     Row(
                       children: [
-                        Checkbox(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(3)),
-                            activeColor: primaryColor,
-                            value: true,
-                            onChanged: (value) {}),
+                        Container(
+                          height: 20.h,
+                          width: 20.w,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(3),
+                              color: primaryColor),
+                              child: const Icon(Icons.check , color: Colors.white  , size: 16),
+                        ),
+                      W(7),
                         Text(
                           'Allow quotes from other brands',
                           style: getTextStyle(
@@ -237,9 +242,12 @@ class _CreateRequestScreenState extends State<CreateRequestScreen> {
                       ),
                     ),
                     H(18),
-                     CommonButton(text: 'Submit Request' , onPressed: () {
-                       Navigator.pushNamed(context, CheckoutScreen.route);
-                     },),
+                    CommonButton(
+                      text: 'Submit Request',
+                      onPressed: () {
+                        Navigator.pushNamed(context, CheckoutScreen.route);
+                      },
+                    ),
                     H(30)
                   ],
                 ),

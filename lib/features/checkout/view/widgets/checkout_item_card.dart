@@ -59,11 +59,12 @@ class CheckoutItemCard extends StatelessWidget {
                                 color: const Color(0xff434343)),
                           ),
                           Container(
+                            height: 44.h,
                             decoration: BoxDecoration(
                                 border: Border.all(
                                     color: const Color(0xffAFAFB6), width: 1),
                                 borderRadius: BorderRadius.circular(4)),
-                            child: Row(
+                            child: Row(crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 IconButton(
                                     onPressed: () {},
@@ -90,7 +91,7 @@ class CheckoutItemCard extends StatelessWidget {
                       ),
                       H(19),
                       const Divider(
-                        color: Color(0xffAFAFB6),height: 0,thickness: 1,
+                        color: Color(0xffAFAFB6),height: 0,thickness: .6,
                       ) , H(6) ,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
