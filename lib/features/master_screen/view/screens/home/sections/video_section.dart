@@ -1,3 +1,4 @@
+import 'package:build_out/constants/colors.dart';
 import 'package:build_out/constants/text_styles.dart';
 import 'package:build_out/utils/images.dart';
 import 'package:build_out/widgets/common_button.dart';
@@ -21,8 +22,8 @@ class _VideoSectionState extends State<VideoSection> {
     _controller = VideoPlayerController.networkUrl(Uri.parse(
         'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'))
       ..initialize().then((_) {
-      //  _controller.play();
-      
+        //  _controller.play();
+
         setState(() {});
       });
     super.initState();
@@ -33,9 +34,9 @@ class _VideoSectionState extends State<VideoSection> {
     return Expanded(
       child: SingleChildScrollView(
         child: Column(
-          children: [     
-               H(30),
-              Row(
+          children: [
+            H(30),
+            Row(
               children: [
                 W(20),
                 Image.asset(
@@ -73,17 +74,35 @@ class _VideoSectionState extends State<VideoSection> {
                 ),
                 W(10)
               ],
-            ) ,
+            ),
             Container(
                 height: 500.h,
                 color: const Color(0xff00040D),
                 alignment: Alignment.center,
                 child: _controller.value.isInitialized
-                    ? AspectRatio(
-                        aspectRatio: _controller.value.aspectRatio,
-                        child: VideoPlayer(_controller ),
+                    ? Stack(
+                        children: [
+                          Align(
+                            alignment: Alignment.center,
+                            child: AspectRatio(
+                              aspectRatio: _controller.value.aspectRatio,
+                              child: VideoPlayer(_controller),
+                            ),
+                          ),
+                          Align(
+                              alignment: Alignment.bottomCenter,
+                              child: VideoProgressIndicator(
+                                _controller,
+                                allowScrubbing: true,
+                                colors: const VideoProgressColors(
+                                    playedColor: primaryColor,
+                                    backgroundColor: Color(0xffAFAFB6),
+                                    bufferedColor: Color(0xffAFAFB6)),
+                              )),
+                        ],
                       )
-                    : const Center(child: CircularProgressIndicator.adaptive())),
+                    : const Center(
+                        child: CircularProgressIndicator.adaptive())),
             H(10),
             Row(
               children: [

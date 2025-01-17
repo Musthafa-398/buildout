@@ -9,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../constants/colors.dart';
+import 'sections/video_section.dart';
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
@@ -104,8 +105,8 @@ class HomeScreen extends StatelessWidget {
               )),
         ),
 
-        const ProductsSection()
-        // const VideoSection()
+        // const ProductsSection()
+        const VideoSection()
       ],
     ));
   }

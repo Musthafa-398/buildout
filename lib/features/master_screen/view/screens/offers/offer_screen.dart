@@ -23,14 +23,16 @@ class OfferScreen extends StatefulWidget {
 class _OfferScreenState extends State<OfferScreen> {
   int selectedIndex = 0;
   @override
-                      
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leadingWidth: leadingWidth,
+      appBar: AppBar(
+        leadingWidth: leadingWidth,
         backgroundColor: Colors.white,
-        leading:  CommonBackButton(onPressed: () {
-              context.read<MasterViewModel>().selectedIndex = 0;
-        },),
+        leading: CommonBackButton(
+          onPressed: () {
+            context.read<MasterViewModel>().selectedIndex = 0;
+          },
+        ),
         centerTitle: true,
         title: Text('Offers',
             style: getTextStyle(
