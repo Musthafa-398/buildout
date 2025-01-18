@@ -22,7 +22,7 @@ class OfferCard extends StatelessWidget {
             color: const Color(0xffF7FAFF),
             boxShadow: [
               BoxShadow(
-                  offset: const Offset(2, 3),
+                  offset: const Offset(0,1),
                   blurRadius: 18.8,
                   spreadRadius: 0,
                   color: const Color(0xff000000).withValues(alpha: .2))

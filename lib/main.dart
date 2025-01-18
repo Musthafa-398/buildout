@@ -1,11 +1,10 @@
-import 'package:build_out/features/master_screen/view/master_screen.dart';
+
 import 'package:build_out/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'config/app_routes.dart';
 import 'constants/text_styles.dart';
-import 'features/otp_verify/enter_number_screen.dart';
 import 'utils/providers.dart';
 
 void main() {

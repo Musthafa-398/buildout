@@ -6,23 +6,17 @@ import 'package:build_out/widgets/gap.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../../../constants/colors.dart';
-import 'sections/post_card.dart';
+import '../home/home_screen.dart';
+import '../home/sections/products_section.dart';
 
-final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class MarketScreen extends StatelessWidget {
+  const MarketScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List videos = [
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4'
-    ];
- 
     return Scaffold(
         body: Column(
       children: [
@@ -116,18 +110,8 @@ class HomeScreen extends StatelessWidget {
                     )),
               ),
 
-              // const ProductsSection()
-              H(30),
-              Expanded(
-                child: ListView.separated(
-                    shrinkWrap: true,
-                    padding: EdgeInsets.zero,
-                    itemBuilder: (context, index) {
-                      return  PostCard(url:videos[index]);
-                    },
-                    separatorBuilder: (context, index) => H(15),
-                    itemCount: videos.length),
-              )
+              const ProductsSection()
+             
             ],
           ),
         )
